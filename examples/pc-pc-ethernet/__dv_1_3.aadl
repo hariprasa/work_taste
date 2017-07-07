@@ -13,11 +13,11 @@ WITH ocarina_drivers;
 WITH Taste;
 WITH Deployment;
 WITH TASTE_DV_Properties;
-PROCESS Partition1
-END Partition1;
+PROCESS consumer_partition
+END consumer_partition;
 
-PROCESS IMPLEMENTATION Partition1.others
-END Partition1.others;
+PROCESS IMPLEMENTATION consumer_partition.others
+END consumer_partition.others;
 
 DEVICE generic_sockets_ip_pohic
 EXTENDS ocarina_drivers::generic_sockets_ip
@@ -47,11 +47,11 @@ WITH ocarina_drivers;
 WITH Taste;
 WITH Deployment;
 WITH TASTE_DV_Properties;
-PROCESS x86_partition
-END x86_partition;
+PROCESS producer_partition
+END producer_partition;
 
-PROCESS IMPLEMENTATION x86_partition.others
-END x86_partition.others;
+PROCESS IMPLEMENTATION producer_partition.others
+END producer_partition.others;
 
 DEVICE generic_sockets_ip_pohic
 EXTENDS ocarina_drivers::generic_sockets_ip
@@ -95,7 +95,7 @@ SUBCOMPONENTS
   IV_consumer : SYSTEM interfaceview::IV::consumer.others {
     Taste::FunctionName => "consumer";
   };
-  Partition1 : PROCESS deploymentview::DV::Node2::Partition1.others {
+  consumer_partition : PROCESS deploymentview::DV::Node2::consumer_partition.others {
     Taste::coordinates => "175288 62464 199657 76951";
     Deployment::Port_Number => 0;
   };
@@ -108,8 +108,8 @@ SUBCOMPONENTS
 CONNECTIONS
   generic_sockets_ip_pohic_ip_i_link : BUS ACCESS generic_sockets_ip_pohic_ip_i -> generic_sockets_ip_pohic.link;
 PROPERTIES
-  Taste::APLC_Binding => (reference (Partition1)) APPLIES TO IV_consumer;
-  Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO Partition1;
+  Taste::APLC_Binding => (reference (consumer_partition)) APPLIES TO IV_consumer;
+  Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO consumer_partition;
   Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO generic_sockets_ip_pohic;
 END Node2.others;
 
@@ -123,7 +123,7 @@ SUBCOMPONENTS
   IV_producer : SYSTEM interfaceview::IV::producer.others {
     Taste::FunctionName => "producer";
   };
-  x86_partition : PROCESS deploymentview::DV::Node1::x86_partition.others {
+  producer_partition : PROCESS deploymentview::DV::Node1::producer_partition.others {
     Taste::coordinates => "101862 62836 126375 77214";
     Deployment::Port_Number => 0;
   };
@@ -136,8 +136,8 @@ SUBCOMPONENTS
 CONNECTIONS
   generic_sockets_ip_pohic_ip_i_link : BUS ACCESS generic_sockets_ip_pohic_ip_i -> generic_sockets_ip_pohic.link;
 PROPERTIES
-  Taste::APLC_Binding => (reference (x86_partition)) APPLIES TO IV_producer;
-  Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO x86_partition;
+  Taste::APLC_Binding => (reference (producer_partition)) APPLIES TO IV_producer;
+  Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO producer_partition;
   Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO generic_sockets_ip_pohic;
 END Node1.others;
 
@@ -163,6 +163,11 @@ CONNECTIONS
   Connection2 : BUS ACCESS ip_i -> Node1.generic_sockets_ip_pohic_ip_i {
     Taste::coordinates => "111358 101447 111358 134709 118525 134709";
   };
+PROPERTIES
+  Actual_Connection_Binding => (reference (ip_i)) APPLIES TO interfaceview.consumer_PI_data4M_producer_RI_data4M;
+  Actual_Connection_Binding => (reference (ip_i)) APPLIES TO interfaceview.consumer_PI_dat2M_producer_RI_dat2M;
+  Actual_Connection_Binding => (reference (ip_i)) APPLIES TO interfaceview.consumer_PI_data512k_producer_RI_data512k;
+  Actual_Connection_Binding => (reference (ip_i)) APPLIES TO interfaceview.consumer_PI_data16k_producer_RI_data16k;
 END deploymentview.others;
 
 PROPERTIES

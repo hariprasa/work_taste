@@ -1,0 +1,8 @@
+DeviceConfig-node1-leon-ethernet-raw DEFINITIONS ::=
+BEGIN
+IMPORTS IP-Conf-T FROM POHICDRIVER-IP;
+
+
+pohidrv-node1-leon-ethernet-raw-cv IP-Conf-T ::= {devname "gr_eth1", address "192.168.0.81", gateway "192.168.0.1", netmask "255.255.0.0", version ipv4, port 5118 }
+
+END
