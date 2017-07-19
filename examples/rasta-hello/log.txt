@@ -1,0 +1,423 @@
+D_view_aadlv2.aadl:50:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:50:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:90:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:90:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:130:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:130:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:170:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:170:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:210:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:210:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:250:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:250:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:290:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:290:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:330:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:330:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:370:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:370:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:410:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:410:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:450:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:450:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:490:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:490:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:530:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:530:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:566:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:566:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:50:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:50:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:90:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:90:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:130:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:130:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:170:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:170:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:210:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:210:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:250:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:250:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:290:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:290:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:330:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:330:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:370:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:370:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:410:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:410:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:450:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:450:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:490:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:490:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:530:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:530:05: Warning: The value of Source_Language has been converted into a list.
+D_view_aadlv2.aadl:566:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view_aadlv2.aadl:566:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:50:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:50:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:90:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:90:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:130:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:130:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:170:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:170:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:210:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:210:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:250:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:250:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:290:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:290:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:330:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:330:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:370:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:370:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:410:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:410:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:450:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:450:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:490:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:490:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:530:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:530:05: Warning: The value of Source_Language has been converted into a list.
+D_view.aadl:566:05: Warning: Source_Language is not a list while the corresponding property name at programming_properties.aadl:61:02 is a list.
+D_view.aadl:566:05: Warning: The value of Source_Language has been converted into a list.
+C_ASN1_Types.c: In function 'Encode_NATIVE_T_Boolean':
+C_ASN1_Types.c:239:54: warning: unused parameter 'iMaxBufferSize' [-Wunused-parameter]
+ size_t Encode_NATIVE_T_Boolean(void *pBuffer, size_t iMaxBufferSize, const asn1SccT_Boolean *pSrc)
+                                                      ^~~~~~~~~~~~~~
+C_ASN1_Types.c: In function 'Decode_NATIVE_T_Boolean':
+C_ASN1_Types.c:289:75: warning: unused parameter 'iBufferSize' [-Wunused-parameter]
+ int Decode_NATIVE_T_Boolean(asn1SccT_Boolean *pDst, void *pBuffer, size_t iBufferSize)
+                                                                           ^~~~~~~~~~~
+C_ASN1_Types.c: In function 'Encode_NATIVE_T_Boolean':
+C_ASN1_Types.c:1199:54: warning: unused parameter 'iMaxBufferSize' [-Wunused-parameter]
+ size_t Encode_NATIVE_T_Boolean(void *pBuffer, size_t iMaxBufferSize, const asn1SccT_Boolean *pSrc)
+                                                      ^~~~~~~~~~~~~~
+C_ASN1_Types.c: In function 'Decode_NATIVE_T_Boolean':
+C_ASN1_Types.c:1249:75: warning: unused parameter 'iBufferSize' [-Wunused-parameter]
+ int Decode_NATIVE_T_Boolean(asn1SccT_Boolean *pDst, void *pBuffer, size_t iBufferSize)
+                                                                           ^~~~~~~~~~~
+function1.c: In function 'function1_startup':
+function1.c:9:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+     printf("funciton1 startup");
+     ^~~~~~
+function1.c:9:5: warning: incompatible implicit declaration of built-in function 'printf'
+function1.c:9:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+function1.c: In function 'function1_PI_trigger':
+function1.c:15:5: warning: incompatible implicit declaration of built-in function 'printf'
+     printf("Hello World");
+     ^~~~~~
+function1.c:15:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+function1_polyorb_interface.c: In function 'po_hi_c_function1_trigger':
+function1_polyorb_interface.c:13:48: warning: unused parameter 'e' [-Wunused-parameter]
+ void po_hi_c_function1_trigger(__po_hi_task_id e)
+                                                ^
+invoke_ri.c: In function 'function1_RI_check_queue':
+invoke_ri.c:35:43: warning: pointer targets in passing argument 2 of 'vm_function1_check_queue' differ in signedness [-Wpointer-sign]
+     vm_function1_check_queue(OUT_buf_res, &size_OUT_buf_res);
+                                           ^
+invoke_ri.c:33:17: note: expected 'size_t * {aka unsigned int *}' but argument is of type 'int *'
+     extern void vm_function1_check_queue(void *, size_t *);
+                 ^~~~~~~~~~~~~~~~~~~~~~~~
+leon_partition_taste_api.c: In function 'leon_partition_taste_api_PI_function1_has_pending_msg':
+leon_partition_taste_api.c:22:78: warning: unused parameter 'res' [-Wunused-parameter]
+ void leon_partition_taste_api_PI_function1_has_pending_msg(asn1SccT_Boolean *res) {
+                                                                              ^~~
+PrintTypes.c: In function 'PrintT_UInt8':
+PrintTypes.c:13:31: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintT_UInt8(const char *paramName, const asn1SccT_UInt8 *pData)
+                               ^~~~~~~~~
+PrintTypes.c:13:64: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintT_UInt8(const char *paramName, const asn1SccT_UInt8 *pData)
+                                                                ^~~~~
+PrintTypes.c: In function 'PrintMySeqOf':
+PrintTypes.c:30:31: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintMySeqOf(const char *paramName, const asn1SccMySeqOf *pData)
+                               ^~~~~~~~~
+PrintTypes.c:30:64: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintMySeqOf(const char *paramName, const asn1SccMySeqOf *pData)
+                                                                ^~~~~
+PrintTypes.c: In function 'PrintMyReal':
+PrintTypes.c:48:30: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintMyReal(const char *paramName, const asn1SccMyReal *pData)
+                              ^~~~~~~~~
+PrintTypes.c:48:62: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintMyReal(const char *paramName, const asn1SccMyReal *pData)
+                                                              ^~~~~
+PrintTypes.c: In function 'PrintMySeq':
+PrintTypes.c:61:29: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintMySeq(const char *paramName, const asn1SccMySeq *pData)
+                             ^~~~~~~~~
+PrintTypes.c:61:60: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintMySeq(const char *paramName, const asn1SccMySeq *pData)
+                                                            ^~~~~
+PrintTypes.c: In function 'PrintMyEnum':
+PrintTypes.c:84:30: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintMyEnum(const char *paramName, const asn1SccMyEnum *pData)
+                              ^~~~~~~~~
+PrintTypes.c:84:62: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintMyEnum(const char *paramName, const asn1SccMyEnum *pData)
+                                                              ^~~~~
+PrintTypes.c: In function 'PrintMyInteger':
+PrintTypes.c:97:33: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintMyInteger(const char *paramName, const asn1SccMyInteger *pData)
+                                 ^~~~~~~~~
+PrintTypes.c:97:68: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintMyInteger(const char *paramName, const asn1SccMyInteger *pData)
+                                                                    ^~~~~
+PrintTypes.c: In function 'PrintMyChoice':
+PrintTypes.c:114:32: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintMyChoice(const char *paramName, const asn1SccMyChoice *pData)
+                                ^~~~~~~~~
+PrintTypes.c:114:66: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintMyChoice(const char *paramName, const asn1SccMyChoice *pData)
+                                                                  ^~~~~
+PrintTypes.c: In function 'PrintT_Int8':
+PrintTypes.c:142:30: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintT_Int8(const char *paramName, const asn1SccT_Int8 *pData)
+                              ^~~~~~~~~
+PrintTypes.c:142:62: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintT_Int8(const char *paramName, const asn1SccT_Int8 *pData)
+                                                              ^~~~~
+PrintTypes.c: In function 'PrintT_Int32':
+PrintTypes.c:159:31: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintT_Int32(const char *paramName, const asn1SccT_Int32 *pData)
+                               ^~~~~~~~~
+PrintTypes.c:159:64: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintT_Int32(const char *paramName, const asn1SccT_Int32 *pData)
+                                                                ^~~~~
+PrintTypes.c: In function 'PrintT_Boolean':
+PrintTypes.c:176:33: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintT_Boolean(const char *paramName, const asn1SccT_Boolean *pData)
+                                 ^~~~~~~~~
+PrintTypes.c:176:68: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintT_Boolean(const char *paramName, const asn1SccT_Boolean *pData)
+                                                                    ^~~~~
+PrintTypes.c: In function 'PrintMyBool':
+PrintTypes.c:189:30: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintMyBool(const char *paramName, const asn1SccMyBool *pData)
+                              ^~~~~~~~~
+PrintTypes.c:189:62: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintMyBool(const char *paramName, const asn1SccMyBool *pData)
+                                                              ^~~~~
+PrintTypes.c: In function 'PrintMyOctStr':
+PrintTypes.c:202:32: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintMyOctStr(const char *paramName, const asn1SccMyOctStr *pData)
+                                ^~~~~~~~~
+PrintTypes.c:202:66: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintMyOctStr(const char *paramName, const asn1SccMyOctStr *pData)
+                                                                  ^~~~~
+PrintTypes.c: In function 'PrintT_UInt32':
+PrintTypes.c:222:32: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintT_UInt32(const char *paramName, const asn1SccT_UInt32 *pData)
+                                ^~~~~~~~~
+PrintTypes.c:222:66: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintT_UInt32(const char *paramName, const asn1SccT_UInt32 *pData)
+                                                                  ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1MySeq':
+PrintTypesAsASN1.c:14:33: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1MySeq(const char *paramName, const asn1SccMySeq *pData)
+                                 ^~~~~~~~~
+PrintTypesAsASN1.c:14:64: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1MySeq(const char *paramName, const asn1SccMySeq *pData)
+                                                                ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1T_Int32':
+PrintTypesAsASN1.c:55:35: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1T_Int32(const char *paramName, const asn1SccT_Int32 *pData)
+                                   ^~~~~~~~~
+PrintTypesAsASN1.c:55:68: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1T_Int32(const char *paramName, const asn1SccT_Int32 *pData)
+                                                                    ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1MyChoice':
+PrintTypesAsASN1.c:74:36: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1MyChoice(const char *paramName, const asn1SccMyChoice *pData)
+                                    ^~~~~~~~~
+PrintTypesAsASN1.c:74:70: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1MyChoice(const char *paramName, const asn1SccMyChoice *pData)
+                                                                      ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1MyEnum':
+PrintTypesAsASN1.c:122:34: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1MyEnum(const char *paramName, const asn1SccMyEnum *pData)
+                                  ^~~~~~~~~
+PrintTypesAsASN1.c:122:66: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1MyEnum(const char *paramName, const asn1SccMyEnum *pData)
+                                                                  ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1T_UInt32':
+PrintTypesAsASN1.c:149:36: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1T_UInt32(const char *paramName, const asn1SccT_UInt32 *pData)
+                                    ^~~~~~~~~
+PrintTypesAsASN1.c:149:70: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1T_UInt32(const char *paramName, const asn1SccT_UInt32 *pData)
+                                                                      ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1MyBool':
+PrintTypesAsASN1.c:168:34: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1MyBool(const char *paramName, const asn1SccMyBool *pData)
+                                  ^~~~~~~~~
+PrintTypesAsASN1.c:168:66: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1MyBool(const char *paramName, const asn1SccMyBool *pData)
+                                                                  ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1MyOctStr':
+PrintTypesAsASN1.c:183:36: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1MyOctStr(const char *paramName, const asn1SccMyOctStr *pData)
+                                    ^~~~~~~~~
+PrintTypesAsASN1.c:183:70: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1MyOctStr(const char *paramName, const asn1SccMyOctStr *pData)
+                                                                      ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1T_Int8':
+PrintTypesAsASN1.c:205:34: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1T_Int8(const char *paramName, const asn1SccT_Int8 *pData)
+                                  ^~~~~~~~~
+PrintTypesAsASN1.c:205:66: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1T_Int8(const char *paramName, const asn1SccT_Int8 *pData)
+                                                                  ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1MyInteger':
+PrintTypesAsASN1.c:224:37: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1MyInteger(const char *paramName, const asn1SccMyInteger *pData)
+                                     ^~~~~~~~~
+PrintTypesAsASN1.c:224:72: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1MyInteger(const char *paramName, const asn1SccMyInteger *pData)
+                                                                        ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1MyReal':
+PrintTypesAsASN1.c:243:34: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1MyReal(const char *paramName, const asn1SccMyReal *pData)
+                                  ^~~~~~~~~
+PrintTypesAsASN1.c:243:66: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1MyReal(const char *paramName, const asn1SccMyReal *pData)
+                                                                  ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1T_Boolean':
+PrintTypesAsASN1.c:258:37: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1T_Boolean(const char *paramName, const asn1SccT_Boolean *pData)
+                                     ^~~~~~~~~
+PrintTypesAsASN1.c:258:72: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1T_Boolean(const char *paramName, const asn1SccT_Boolean *pData)
+                                                                        ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1MySeqOf':
+PrintTypesAsASN1.c:273:35: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1MySeqOf(const char *paramName, const asn1SccMySeqOf *pData)
+                                   ^~~~~~~~~
+PrintTypesAsASN1.c:273:68: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1MySeqOf(const char *paramName, const asn1SccMySeqOf *pData)
+                                                                    ^~~~~
+PrintTypesAsASN1.c: In function 'PrintASN1T_UInt8':
+PrintTypesAsASN1.c:309:35: warning: unused parameter 'paramName' [-Wunused-parameter]
+ void PrintASN1T_UInt8(const char *paramName, const asn1SccT_UInt8 *pData)
+                                   ^~~~~~~~~
+PrintTypesAsASN1.c:309:68: warning: unused parameter 'pData' [-Wunused-parameter]
+ void PrintASN1T_UInt8(const char *paramName, const asn1SccT_UInt8 *pData)
+                                                                    ^~~~~
+dataview-uniq.c: In function 'asn1SccMyChoice_IsConstraintValid':
+dataview-uniq.c:761:2: warning: enumeration value 'MyChoice_NONE' not handled in switch [-Wswitch-enum]
+  switch (pVal->kind) {
+  ^~~~~~
+dataview-uniq.c: In function 'asn1SccMyChoice_Encode':
+dataview-uniq.c:782:6: warning: enumeration value 'MyChoice_NONE' not handled in switch [-Wswitch-enum]
+      switch(pVal->kind)
+      ^~~~~~
+dataview-uniq.c: In function 'asn1SccMyChoice_ACN_Encode':
+dataview-uniq.c:835:6: warning: enumeration value 'MyChoice_NONE' not handled in switch [-Wswitch-enum]
+      switch(pVal->kind)
+      ^~~~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c: In function '__po_hi_wait_for_next_period':
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_TASK_EXITTED' not handled in switch [-Wswitch-enum]
+    switch (ret)
+    ^~~~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_MP_NOT_CONFIGURED' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INVALID_NAME' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INVALID_ID' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_TOO_MANY' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_OBJECT_WAS_DELETED' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INVALID_SIZE' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INVALID_ADDRESS' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INVALID_NUMBER' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_NOT_DEFINED' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_RESOURCE_IN_USE' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_UNSATISFIED' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INCORRECT_STATE' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_ALREADY_SUSPENDED' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_ILLEGAL_ON_SELF' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_ILLEGAL_ON_REMOTE_OBJECT' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_CALLED_FROM_ISR' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INVALID_PRIORITY' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INVALID_CLOCK' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INVALID_NODE' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_NOT_CONFIGURED' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_NOT_OWNER_OF_RESOURCE' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_NOT_IMPLEMENTED' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_INTERNAL_ERROR' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_NO_MEMORY' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_IO_ERROR' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:286:4: warning: enumeration value 'RTEMS_PROXY_BLOCKING' not handled in switch [-Wswitch-enum]
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c: In function '__po_hi_rtems_create_thread':
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:518:58: warning: unused parameter 'priority' [-Wunused-parameter]
+ rtems_id __po_hi_rtems_create_thread (__po_hi_priority_t priority,
+                                                          ^~~~~~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:519:58: warning: unused parameter 'stack_size' [-Wunused-parameter]
+                                       __po_hi_stack_t    stack_size,
+                                                          ^~~~~~~~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:522:58: warning: unused parameter 'arg' [-Wunused-parameter]
+                                       void*              arg)
+                                                          ^~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c: In function '__po_hi_task_delay_until':
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:759:47: warning: unused parameter 'time' [-Wunused-parameter]
+ int __po_hi_task_delay_until (__po_hi_time_t* time, __po_hi_task_id task)
+                                               ^~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_task.c:759:69: warning: unused parameter 'task' [-Wunused-parameter]
+ int __po_hi_task_delay_until (__po_hi_time_t* time, __po_hi_task_id task)
+                                                                     ^~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_time.c: In function '__po_hi_delay_until':
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_time.c:185:48: warning: unused parameter 'time' [-Wunused-parameter]
+ int __po_hi_delay_until (const __po_hi_time_t* time)
+                                                ^~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_protected.c: In function '__po_hi_mutex_init':
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_protected.c:94:80: warning: unused parameter 'protocol' [-Wunused-parameter]
+ int __po_hi_mutex_init (__po_hi_mutex_t* mutex, const __po_hi_mutex_protocol_t protocol, const int priority)
+                                                                                ^~~~~~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_protected.c:94:100: warning: unused parameter 'priority' [-Wunused-parameter]
+ int __po_hi_mutex_init (__po_hi_mutex_t* mutex, const __po_hi_mutex_protocol_t protocol, const int priority)
+                                                                                                    ^~~~~~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c: In function '__po_hi_storage_file_open':
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:29:8: warning: unused variable 'fd' [-Wunused-variable]
+    int fd;
+        ^~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c: In function '__po_hi_storage_file_read':
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:147:8: warning: unused variable 'n' [-Wunused-variable]
+    int n;
+        ^
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:145:74: warning: unused parameter 'buf' [-Wunused-parameter]
+ int __po_hi_storage_file_read (const __po_hi_storage_file_t* file, char* buf, int bufsize)
+                                                                          ^~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:145:83: warning: unused parameter 'bufsize' [-Wunused-parameter]
+ int __po_hi_storage_file_read (const __po_hi_storage_file_t* file, char* buf, int bufsize)
+                                                                                   ^~~~~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c: In function '__po_hi_storage_file_write':
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:176:8: warning: unused variable 'n' [-Wunused-variable]
+    int n;
+        ^
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:174:75: warning: unused parameter 'buf' [-Wunused-parameter]
+ int __po_hi_storage_file_write (const __po_hi_storage_file_t* file, char* buf, int bufsize)
+                                                                           ^~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:174:84: warning: unused parameter 'bufsize' [-Wunused-parameter]
+ int __po_hi_storage_file_write (const __po_hi_storage_file_t* file, char* buf, int bufsize)
+                                                                                    ^~~~~~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c: In function '__po_hi_storage_file_append':
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:291:8: warning: unused variable 'ret' [-Wunused-variable]
+    int ret;
+        ^~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:289:76: warning: unused parameter 'buf' [-Wunused-parameter]
+ int __po_hi_storage_file_append (const __po_hi_storage_file_t* file, char* buf, int bufsize)
+                                                                            ^~~
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/src/./po_hi_storage.c:289:85: warning: unused parameter 'bufsize' [-Wunused-parameter]
+ int __po_hi_storage_file_append (const __po_hi_storage_file_t* file, char* buf, int bufsize)
+                                                                                     ^~~~~~~
+main.c: In function 'Init':
+main.c:69:10: warning: 'return' with a value, in function returning void
+   return (__PO_HI_MAIN_RETURN);
+          ^
+In file included from main.c:2:0:
+/home/taste/work_taste/examples/rasta-hello/binary.c/GlueAndBuild/deploymentview_final/leon_partition/../../../../polyorb-hi-c/include/po_hi_task.h:52:30: note: declared here
+    #define __PO_HI_MAIN_NAME Init
+                              ^
+main.c:19:19: note: in expansion of macro '__PO_HI_MAIN_NAME'
+ __PO_HI_MAIN_TYPE __PO_HI_MAIN_NAME (void)
+                   ^~~~~~~~~~~~~~~~~
