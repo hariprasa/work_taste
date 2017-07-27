@@ -12,7 +12,7 @@ void consumer_startup()
 void consumer_PI_data4M(const asn1SccMyData4M *IN_t4m)
 {
     /* Write your code here! */
-    printf("data4M received : %d \n", *IN_t4M);
+    printf("data4M received : %d \n", *IN_t4m);
 }
 
 void consumer_PI_dat2M(const asn1SccMyData2M *IN_d2M)

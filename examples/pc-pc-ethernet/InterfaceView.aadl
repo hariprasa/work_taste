@@ -228,16 +228,16 @@ SUBCOMPONENTS
   };
 CONNECTIONS
   consumer_PI_data4M_producer_RI_data4M : SUBPROGRAM ACCESS consumer.PI_data4M -> producer.RI_data4M {
-    Taste::coordinates => "131645 71020 162461 71020 162461 73068 179969 73068";
+    Taste::coordinates => "131645 71020 155807 71020 155807 73068 179969 73068";
   };
   consumer_PI_dat2M_producer_RI_dat2M : SUBPROGRAM ACCESS consumer.PI_dat2M -> producer.RI_dat2M {
-    Taste::coordinates => "131645 76462 162461 76462 162461 78510 179969 78510";
+    Taste::coordinates => "131645 76462 155807 76462 155807 78510 179969 78510";
   };
   consumer_PI_data512k_producer_RI_data512k : SUBPROGRAM ACCESS consumer.PI_data512k -> producer.RI_data512k {
-    Taste::coordinates => "131645 81904 162461 81904 162461 83953 179969 83953";
+    Taste::coordinates => "131645 81904 155807 81904 155807 83953 179969 83953";
   };
   consumer_PI_data16k_producer_RI_data16k : SUBPROGRAM ACCESS consumer.PI_data16k -> producer.RI_data16k {
-    Taste::coordinates => "131645 87346 162461 87346 162461 89395 179969 89395";
+    Taste::coordinates => "131645 87346 155807 87346 155807 89395 179969 89395";
   };
 END interfaceview.others;
 
