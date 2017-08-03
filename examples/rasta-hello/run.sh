@@ -6,5 +6,4 @@ make install
 cd ..
 ./build-script.sh
 scp binary.c/binaries/leon_partition root@prise-space-3:~/taste_examples/
-sparc-rtems4.12-gdb binary.c/binaries/leon_partition
-
+sparc-rtems4.12-gdb -x gdb_commands binary.c/binaries/leon_partition
