@@ -67,13 +67,20 @@
    #include <rtems.h>
    #include <inttypes.h>
    #define CONFIGURE_INIT
+//   #define CONFIGURE_INIT_TASK_ATTRIBUTES RTEMS_DEFAULT_ATTRIBUTES
+//   #define CONFIGURE_INIT_TASK_STACK_SIZE RTEMS_MINIMUM_STACK_SIZE
+//   #define CONFIGURE_INIT_TASK_PRIORITY   1
+   #define CONFIGURE_INIT_TASK_INITIAL_MODES (RTEMS_PREEMPT | \
+                                              RTEMS_NO_TIMESLICE | \
+                                              RTEMS_NO_ASR | \
+                                              RTEMS_INTERRUPT_LEVEL(0))  
    #include <bsp.h>
 
    #define CONFIGURE_APPLICATION_NEEDS_CONSOLE_DRIVER
    #define CONFIGURE_APPLICATION_NEEDS_CLOCK_DRIVER
    #define CONFIGURE_APPLICATION_NEEDS_NULL_DRIVER 1
 // #define CONFIGURE_APPLICATION_NEEDS_TIMER_DRIVER
-   #define CONFIGURE_MAXIMUM_DRIVERS                     10
+   #define CONFIGURE_MAXIMUM_DRIVERS                     10   
    #define CONFIGURE_MAXIMUM_TIMERS                   40
    #define CONFIGURE_APPLICATION_NEEDS_LIBBLOCK
    #define CONFIGURE_MAXIMUM_MESSAGE_QUEUES 20
@@ -100,14 +107,17 @@
    rtems_task Init (rtems_task_argument no_argument);
 #endif
 
-//   #define CONFIGURE_EXTRA_TASK_STACKS                __PO_HI_TASKS_STACK
-   #define CONFIGURE_STACK_CHECKER_ENABLED
+//   #define CONFIGURE_EXTRA_TASK_STACKS                __PO_HI_TASKS_STACK 
+//   #define CONFIGURE_EXTRA_TASK_STACKS                  (RTEMS_MINIMUM_STACK_SIZE)
+//   #define CONFIGURE_STACK_CHECKER_ENABLED
+
    #define CONFIGURE_USE_IMFS_AS_BASE_FILESYSTEM
    #define CONFIGURE_RTEMS_INIT_TASKS_TABLE
    #define CONFIGURE_MAXIMUM_BARRIERS                 1 + __PO_HI_NB_PORTS + 1
-   #define CONFIGURE_MALLOC_STATISTICS
-   #define CONFIGURE_UNIFIED_WORK_AREAS
-   #define CONFIGURE_UNLIMITED_OBJECTS
+
+//   #define CONFIGURE_MALLOC_STATISTICS
+//   #define CONFIGURE_UNIFIED_WORK_AREAS
+//   #define CONFIGURE_UNLIMITED_OBJECTS
 
    #include <rtems/confdefs.h>
 #endif  /* RTEMS_PURE */

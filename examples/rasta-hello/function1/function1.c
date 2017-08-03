@@ -6,12 +6,12 @@ void function1_startup()
 {
     /* Write your initialization code here,
        but do not make any call to a required interface. */
-    printf("funciton1 startup");
+    printk("funciton1 startup \n");
 }
 
 void function1_PI_trigger()
 {
     /* Write your code here! */
-    printf("Hello World");
+    printk("Hello World \n");
 }
 

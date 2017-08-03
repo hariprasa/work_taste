@@ -188,9 +188,12 @@ int __po_hi_initialize_early ()
 #endif
 
 #ifdef RTEMS_PURE
+
   __DEBUGMSG ("[MAIN] Create a barrier that wait for %d tasks\n", __po_hi_nb_tasks_to_init);
 
-  ret = rtems_barrier_create (rtems_build_name ('B', 'A', 'R', 'M'), RTEMS_BARRIER_AUTOMATIC_RELEASE, __po_hi_nb_tasks_to_init, &__po_hi_main_initialization_barrier);
+  rtems_name name;
+  name= rtems_build_name('B', 'A', 'R', 'M');
+  ret = rtems_barrier_create (&name, RTEMS_BARRIER_AUTOMATIC_RELEASE, __po_hi_nb_tasks_to_init, &__po_hi_main_initialization_barrier);
   if (ret != RTEMS_SUCCESSFUL)
   {
      __DEBUGMSG ("[MAIN] Cannot create the main barrier, return code=%d\n", ret);
@@ -358,7 +361,8 @@ int __po_hi_wait_initialization (void)
 
 #elif defined (RTEMS_PURE)
   rtems_status_code ret;
-
+  
+  printk ("***************Task wait for the barrier**************\n");
   __DEBUGMSG ("[MAIN] Task wait for the barrier\n");
   ret = rtems_barrier_wait (__po_hi_main_initialization_barrier, RTEMS_WAIT);
   if (ret != RTEMS_SUCCESSFUL)

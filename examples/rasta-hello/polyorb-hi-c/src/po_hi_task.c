@@ -522,18 +522,20 @@ rtems_id __po_hi_rtems_create_thread (__po_hi_priority_t priority,
                                       void*              arg)
 {
   rtems_id rid;
-  if (rtems_task_create (rtems_build_name( 'T', 'A', nb_tasks, ' ' ),
-                         priority,// 1,
+  rtems_name tname;
+  tname= rtems_build_name( 'T', 'A', nb_tasks, ' ' );
+  if (rtems_task_create (&tname, 1,//priority, //1
                          RTEMS_MINIMUM_STACK_SIZE,
-                         RTEMS_DEFAULT_MODES,
-                         RTEMS_DEFAULT_ATTRIBUTES | RTEMS_FLOATING_POINT, &rid)
+			 RTEMS_DEFAULT_MODES,
+			 //(RTEMS_PREEMPT | RTEMS_NO_TIMESLICE | RTEMS_NO_ASR | RTEMS_INTERRUPT_LEVEL(0)),
+                         RTEMS_DEFAULT_ATTRIBUTES | RTEMS_NO_FLOATING_POINT, &rid)
       != RTEMS_SUCCESSFUL)
     {
       __DEBUGMSG ("ERROR when creating the task\n");
       return __PO_HI_ERROR_CREATE_TASK;
     }
 
-#ifdef RTEMS412
+#ifdef RTEMS411
   /* Thread affinity API for SMP systems appeared in RTEMS 4.11,
      section 25 of RTEMS Applications C User's Guide .
   */
@@ -550,7 +552,7 @@ rtems_id __po_hi_rtems_create_thread (__po_hi_priority_t priority,
     }
 #endif
 
-  if (rtems_task_start (rid, (rtems_task_entry)start_routine, 0 ) != RTEMS_SUCCESSFUL)
+  if (rtems_task_start (rid, (rtems_task_entry)start_routine, arg ) != RTEMS_SUCCESSFUL)
     {
       __DEBUGMSG ("ERROR when starting the task\n");
       return __PO_HI_ERROR_CREATE_TASK;
@@ -644,6 +646,17 @@ int __po_hi_create_generic_task (const __po_hi_task_id      id,
       nb_tasks++;
     }
 
+  rtems_task_priority  the_priority; 
+  if (nb_tasks == __PO_HI_NB_TASKS)
+  {
+    rtems_task_set_priority(RTEMS_SELF, 50, &the_priority);
+    printk("main-- current priority : %d, will be set to 50\n", (int)the_priority);
+    rtems_task_set_priority(RTEMS_SELF, RTEMS_CURRENT_PRIORITY, &the_priority); 
+    printk("main-- check current priority:%d\n", (int)the_priority); 
+    
+    rtems_task_wake_after(RTEMS_YIELD_PROCESSOR);
+  }  
+  
   return (__PO_HI_SUCCESS);
 }
 
