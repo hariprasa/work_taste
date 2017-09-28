@@ -1,0 +1,41 @@
+TASTE-Dataview DEFINITIONS ::=
+BEGIN
+IMPORTS T-Int32, T-UInt32, T-Int8, T-UInt8, T-Boolean FROM TASTE-BasicTypes;
+
+-- A few simple types to start with ASN.1
+MyInteger   ::= T-UInt8
+
+MyReal      ::= REAL (0.0 .. 1000.0)
+
+MyBool      ::= BOOLEAN
+
+MyEnum      ::= ENUMERATED { hello, world, howareyou }
+
+MySeq       ::= SEQUENCE {
+    input-data  MyInteger,
+    output-data MyInteger,
+    validity    ENUMERATED { valid, invalid }
+}
+
+MyChoice    ::= CHOICE {
+    a BOOLEAN,
+    b MySeq
+}
+
+MySeqOf     ::= SEQUENCE (SIZE (2)) OF MyEnum
+
+MyOctStr    ::= OCTET STRING (SIZE (3))
+
+-- You can also declare constants
+myVar       MySeqOf     ::= { hello, world }
+
+MyData16k ::= SEQUENCE (SIZE(16)) OF T-UInt32
+MyData512k ::= SEQUENCE (SIZE(10)) OF T-UInt32
+MyData2M ::= SEQUENCE (SIZE(10)) OF T-UInt32
+MyData4M ::= SEQUENCE (SIZE(10)) OF T-UInt32
+
+END
+
+
+
+
