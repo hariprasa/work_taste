@@ -1,0 +1,7 @@
+--  This file was generated automatically: DO NOT MODIFY IT !
+
+--  This file contains the description of the system distribution.
+--  It is an input file for the TASTE ORCHESTRATOR
+
+* leon_partition PLATFORM_LEON_RTEMS
+function1

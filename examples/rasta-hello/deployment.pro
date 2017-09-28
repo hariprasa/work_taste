@@ -6,16 +6,16 @@ isComponentType('deploymentview::DV::Node1','PUBLIC','leon_partition','PROCESS',
 isComponentImplementation('deploymentview::DV::Node1','PUBLIC','leon_partition','others','PROCESS','NIL','others','').
 isProperty('NIL','APPLIES TO','deploymentview::DV','Node1','others','leon_partition','Actual_Processor_Binding','(reference (leon_rtems))','').
 isSubcomponent('deploymentview::DV','Node1','others','leon_partition','PROCESS','deploymentview::DV::Node1::leon_partition.others','NIL','NIL','').
-isProperty('NIL','=>','deploymentview::DV','Node1','others','leon_partition','Taste::coordinates','"139459 88703 176831 108772"','').
+isProperty('NIL','=>','deploymentview::DV','Node1','others','leon_partition','Taste::coordinates','"128278 61302 165650 81371"','').
 isProperty('NIL','=>','deploymentview::DV','Node1','others','leon_partition','Deployment::Port_Number','0','').
 isImportDeclaration('deploymentview::DV','PUBLIC','ocarina_processors_leon','').
 isProperty('NIL','=>','deploymentview::DV','leon','NIL','NIL','Scheduling_Protocol','Posix_1003_Highest_Priority_First_Protocol','').
 isSubcomponent('deploymentview::DV','Node1','others','leon_rtems','PROCESSOR','ocarina_processors_leon::leon.rtems','NIL','NIL','').
-isProperty('NIL','=>','deploymentview::DV','Node1','others','leon_rtems','Taste::coordinates','"134787 82969 181503 111639"','').
+isProperty('NIL','=>','deploymentview::DV','Node1','others','leon_rtems','Taste::coordinates','"123606 55568 170322 84238"','').
 isComponentType('deploymentview::DV','PUBLIC','Node1','SYSTEM','NIL','').
 isComponentImplementation('deploymentview::DV','PUBLIC','Node1','others','SYSTEM','NIL','others','').
 isSubcomponent('deploymentview::DV','deploymentview','others','Node1','SYSTEM','Node1.others','NIL','NIL','').
-isProperty('NIL','=>','deploymentview::DV','deploymentview','others','Node1','Taste::coordinates','"128947 74778 187343 115735"','').
+isProperty('NIL','=>','deploymentview::DV','deploymentview','others','Node1','Taste::coordinates','"117766 47377 176162 88334"','').
 isPackage('deploymentview::DV::Node1','PUBLIC','').
 isImportDeclaration('deploymentview::DV::Node1','PUBLIC','Taste','').
 isImportDeclaration('deploymentview::DV::Node1','PUBLIC','Deployment','').

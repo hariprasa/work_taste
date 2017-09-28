@@ -38,11 +38,11 @@ SUBCOMPONENTS
     Taste::FunctionName => "Function1";
   };
   leon_partition : PROCESS deploymentview::DV::Node1::leon_partition.others {
-    Taste::coordinates => "139459 88703 176831 108772";
+    Taste::coordinates => "128278 61302 165650 81371";
     Deployment::Port_Number => 0;
   };
   leon_rtems : PROCESSOR ocarina_processors_leon::leon.rtems {
-    Taste::coordinates => "134787 82969 181503 111639";
+    Taste::coordinates => "123606 55568 170322 84238";
   };
 PROPERTIES
   Taste::APLC_Binding => (reference (leon_partition)) APPLIES TO IV_Function1;
@@ -55,7 +55,7 @@ END deploymentview;
 SYSTEM IMPLEMENTATION deploymentview.others
 SUBCOMPONENTS
   Node1 : SYSTEM Node1.others {
-    Taste::coordinates => "128947 74778 187343 115735";
+    Taste::coordinates => "117766 47377 176162 88334";
   };
   interfaceview : SYSTEM interfaceview::IV::interfaceview.others;
 END deploymentview.others;
