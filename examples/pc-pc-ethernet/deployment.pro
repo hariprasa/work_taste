@@ -1,44 +1,4 @@
 isImportDeclaration('deploymentview::DV','PUBLIC','interfaceview::IV','').
-isSubcomponent('deploymentview::DV','Node2','others','IV_consumer','SYSTEM','interfaceview::IV::consumer.others','NIL','NIL','').
-isProperty('NIL','=>','deploymentview::DV','Node2','others','IV_consumer','Taste::FunctionName','"consumer"','').
-isProperty('NIL','APPLIES TO','deploymentview::DV','Node2','others','IV_consumer','Taste::APLC_Binding','(reference (consumer_partition))','').
-isComponentType('deploymentview::DV::Node2','PUBLIC','consumer_partition','PROCESS','NIL','').
-isComponentImplementation('deploymentview::DV::Node2','PUBLIC','consumer_partition','others','PROCESS','NIL','others','').
-isProperty('NIL','APPLIES TO','deploymentview::DV','Node2','others','consumer_partition','Actual_Processor_Binding','(reference (x86_linux32))','').
-isSubcomponent('deploymentview::DV','Node2','others','consumer_partition','PROCESS','deploymentview::DV::Node2::consumer_partition.others','NIL','NIL','').
-isProperty('NIL','=>','deploymentview::DV','Node2','others','consumer_partition','Taste::coordinates','"175288 62464 199657 76951"','').
-isProperty('NIL','=>','deploymentview::DV','Node2','others','consumer_partition','Deployment::Port_Number','0','').
-isImportDeclaration('deploymentview::DV','PUBLIC','ocarina_processors_x86','').
-isProperty('NIL','=>','deploymentview::DV','x86','NIL','NIL','Scheduling_Protocol','Posix_1003_Highest_Priority_First_Protocol','').
-isSubcomponent('deploymentview::DV','Node2','others','x86_linux32','PROCESSOR','ocarina_processors_x86::x86.linux32','NIL','NIL','').
-isProperty('NIL','=>','deploymentview::DV','Node2','others','x86_linux32','Taste::coordinates','"172242 58325 202703 79021"','').
-isConnection('BUS ACCESS','deploymentview::DV','deploymentview','others','Connection1','ip_i','->','Node2.generic_sockets_ip_pohic_ip_i','NIL','').
-isProperty('NIL','=>','deploymentview::DV','deploymentview','others','Connection1','Taste::coordinates','"187736 100551 187736 133813 175417 133813"','').
-isConnection('BUS ACCESS','deploymentview::DV','Node2','others','generic_sockets_ip_pohic_ip_i_link','generic_sockets_ip_pohic_ip_i','->','generic_sockets_ip_pohic.link','NIL','').
-isFeature('ACCESS','deploymentview::DV','Node2','generic_sockets_ip_pohic_ip_i','REQUIRES','BUS','ocarina_buses::ip.i','NIL','NIL','').
-isProperty('NIL','APPLIES TO','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','link','Taste::Interface_Coordinates','"175417 133813"','').
-isImportDeclaration('deploymentview::DV::Node2','PUBLIC','ocarina_buses','').
-isFeature('ACCESS','deploymentview::DV::Node2','generic_sockets_ip_pohic','link','REQUIRES','BUS','ocarina_buses::ip.i','NIL','REFINED TO','').
-isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','link','Taste::coordinates','"187736 100551"','').
-isImportDeclaration('deploymentview::DV::Node2','PUBLIC','ocarina_drivers','').
-isComponentType('deploymentview::DV::Node2','PUBLIC','generic_sockets_ip_pohic','DEVICE','ocarina_drivers::generic_sockets_ip','').
-isComponentImplementation('deploymentview::DV::Node2','PUBLIC','generic_sockets_ip_pohic','others','DEVICE','ocarina_drivers::generic_sockets_ip','pohic','').
-isProperty('NIL','APPLIES TO','deploymentview::DV','Node2','others','generic_sockets_ip_pohic','Actual_Processor_Binding','(reference (x86_linux32))','').
-isSubcomponent('deploymentview::DV','Node2','others','generic_sockets_ip_pohic','DEVICE','deploymentview::DV::Node2::generic_sockets_ip_pohic.others','NIL','NIL','').
-isProperty('NIL','=>','deploymentview::DV','Node2','others','generic_sockets_ip_pohic','Taste::coordinates','"173849 85544 200950 100551"','').
-isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','NIL','Deployment::Help','"Write your ASN.1 configuration here"','').
-isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','NIL','Deployment::Configuration','"{devname ""eth0"", address ""127.0.0.1"", port 5116}"','').
-isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','NIL','Deployment::Config','"/home/taste/tool-inst/include/ocarina/runtime/polyorb-hi-c/src/drivers/configuration/ip.asn"','').
-isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','NIL','Deployment::Version','"0.1beta"','').
-isComponentType('deploymentview::DV','PUBLIC','Node2','SYSTEM','NIL','').
-isComponentImplementation('deploymentview::DV','PUBLIC','Node2','others','SYSTEM','NIL','others','').
-isSubcomponent('deploymentview::DV','deploymentview','others','Node2','SYSTEM','Node2.others','NIL','NIL','').
-isProperty('NIL','=>','deploymentview::DV','deploymentview','others','Node2','Taste::coordinates','"168434 52412 206511 105255"','').
-isPackage('deploymentview::DV::Node2','PUBLIC','').
-isImportDeclaration('deploymentview::DV::Node2','PUBLIC','Taste','').
-isImportDeclaration('deploymentview::DV::Node2','PUBLIC','Deployment','').
-isImportDeclaration('deploymentview::DV::Node2','PUBLIC','TASTE_DV_Properties','').
-isImportDeclaration('deploymentview::DV','PUBLIC','deploymentview::DV::Node2','').
 isSubcomponent('deploymentview::DV','Node1','others','IV_producer','SYSTEM','interfaceview::IV::producer.others','NIL','NIL','').
 isProperty('NIL','=>','deploymentview::DV','Node1','others','IV_producer','Taste::FunctionName','"producer"','').
 isProperty('NIL','APPLIES TO','deploymentview::DV','Node1','others','IV_producer','Taste::APLC_Binding','(reference (producer_partition))','').
@@ -48,6 +8,7 @@ isProperty('NIL','APPLIES TO','deploymentview::DV','Node1','others','producer_pa
 isSubcomponent('deploymentview::DV','Node1','others','producer_partition','PROCESS','deploymentview::DV::Node1::producer_partition.others','NIL','NIL','').
 isProperty('NIL','=>','deploymentview::DV','Node1','others','producer_partition','Taste::coordinates','"101862 62836 126375 77214"','').
 isProperty('NIL','=>','deploymentview::DV','Node1','others','producer_partition','Deployment::Port_Number','0','').
+isImportDeclaration('deploymentview::DV','PUBLIC','ocarina_processors_x86','').
 isProperty('NIL','=>','deploymentview::DV','x86','NIL','NIL','Scheduling_Protocol','Posix_1003_Highest_Priority_First_Protocol','').
 isSubcomponent('deploymentview::DV','Node1','others','x86_linux32','PROCESSOR','ocarina_processors_x86::x86.linux32','NIL','NIL','').
 isProperty('NIL','=>','deploymentview::DV','Node1','others','x86_linux32','Taste::coordinates','"98798 58728 129439 79268"','').
@@ -78,6 +39,45 @@ isImportDeclaration('deploymentview::DV::Node1','PUBLIC','Taste','').
 isImportDeclaration('deploymentview::DV::Node1','PUBLIC','Deployment','').
 isImportDeclaration('deploymentview::DV::Node1','PUBLIC','TASTE_DV_Properties','').
 isImportDeclaration('deploymentview::DV','PUBLIC','deploymentview::DV::Node1','').
+isSubcomponent('deploymentview::DV','Node2','others','IV_consumer','SYSTEM','interfaceview::IV::consumer.others','NIL','NIL','').
+isProperty('NIL','=>','deploymentview::DV','Node2','others','IV_consumer','Taste::FunctionName','"consumer"','').
+isProperty('NIL','APPLIES TO','deploymentview::DV','Node2','others','IV_consumer','Taste::APLC_Binding','(reference (consumer_partition))','').
+isComponentType('deploymentview::DV::Node2','PUBLIC','consumer_partition','PROCESS','NIL','').
+isComponentImplementation('deploymentview::DV::Node2','PUBLIC','consumer_partition','others','PROCESS','NIL','others','').
+isProperty('NIL','APPLIES TO','deploymentview::DV','Node2','others','consumer_partition','Actual_Processor_Binding','(reference (x86_linux32))','').
+isSubcomponent('deploymentview::DV','Node2','others','consumer_partition','PROCESS','deploymentview::DV::Node2::consumer_partition.others','NIL','NIL','').
+isProperty('NIL','=>','deploymentview::DV','Node2','others','consumer_partition','Taste::coordinates','"180054 64430 205401 80660"','').
+isProperty('NIL','=>','deploymentview::DV','Node2','others','consumer_partition','Deployment::Port_Number','0','').
+isProperty('NIL','=>','deploymentview::DV','x86','NIL','NIL','Scheduling_Protocol','Posix_1003_Highest_Priority_First_Protocol','').
+isSubcomponent('deploymentview::DV','Node2','others','x86_linux32','PROCESSOR','ocarina_processors_x86::x86.linux32','NIL','NIL','').
+isProperty('NIL','=>','deploymentview::DV','Node2','others','x86_linux32','Taste::coordinates','"176886 59793 208569 82979"','').
+isConnection('BUS ACCESS','deploymentview::DV','deploymentview','others','Connection1','ip_i','->','Node2.generic_sockets_ip_pohic_ip_i','NIL','').
+isProperty('NIL','=>','deploymentview::DV','deploymentview','others','Connection1','Taste::coordinates','"191037 103812 191037 134357 175417 134357"','').
+isConnection('BUS ACCESS','deploymentview::DV','Node2','others','generic_sockets_ip_pohic_ip_i_link','generic_sockets_ip_pohic_ip_i','->','generic_sockets_ip_pohic.link','NIL','').
+isFeature('ACCESS','deploymentview::DV','Node2','generic_sockets_ip_pohic_ip_i','REQUIRES','BUS','ocarina_buses::ip.i','NIL','NIL','').
+isProperty('NIL','APPLIES TO','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','link','Taste::Interface_Coordinates','"175417 134357"','').
+isImportDeclaration('deploymentview::DV::Node2','PUBLIC','ocarina_buses','').
+isFeature('ACCESS','deploymentview::DV::Node2','generic_sockets_ip_pohic','link','REQUIRES','BUS','ocarina_buses::ip.i','NIL','REFINED TO','').
+isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','link','Taste::coordinates','"191037 103812"','').
+isImportDeclaration('deploymentview::DV::Node2','PUBLIC','ocarina_drivers','').
+isComponentType('deploymentview::DV::Node2','PUBLIC','generic_sockets_ip_pohic','DEVICE','ocarina_drivers::generic_sockets_ip','').
+isComponentImplementation('deploymentview::DV::Node2','PUBLIC','generic_sockets_ip_pohic','others','DEVICE','ocarina_drivers::generic_sockets_ip','pohic','').
+isProperty('NIL','APPLIES TO','deploymentview::DV','Node2','others','generic_sockets_ip_pohic','Actual_Processor_Binding','(reference (x86_linux32))','').
+isSubcomponent('deploymentview::DV','Node2','others','generic_sockets_ip_pohic','DEVICE','deploymentview::DV::Node2::generic_sockets_ip_pohic.others','NIL','NIL','').
+isProperty('NIL','=>','deploymentview::DV','Node2','others','generic_sockets_ip_pohic','Taste::coordinates','"178206 90611 205329 103812"','').
+isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','NIL','Deployment::Help','"Write your ASN.1 configuration here"','').
+isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','NIL','Deployment::Configuration','"{devname ""eth0"", address ""127.0.0.1"", port 5116 }"','').
+isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','NIL','Deployment::Config','"/home/taste/tool-inst/include/ocarina/runtime/polyorb-hi-c/src/drivers/configuration/ip.asn"','').
+isProperty('NIL','=>','deploymentview::DV::Node2','generic_sockets_ip_pohic','NIL','NIL','Deployment::Version','"0.1beta"','').
+isComponentType('deploymentview::DV','PUBLIC','Node2','SYSTEM','NIL','').
+isComponentImplementation('deploymentview::DV','PUBLIC','Node2','others','SYSTEM','NIL','others','').
+isSubcomponent('deploymentview::DV','deploymentview','others','Node2','SYSTEM','Node2.others','NIL','NIL','').
+isProperty('NIL','=>','deploymentview::DV','deploymentview','others','Node2','Taste::coordinates','"172926 53168 212529 107893"','').
+isPackage('deploymentview::DV::Node2','PUBLIC','').
+isImportDeclaration('deploymentview::DV::Node2','PUBLIC','Taste','').
+isImportDeclaration('deploymentview::DV::Node2','PUBLIC','Deployment','').
+isImportDeclaration('deploymentview::DV::Node2','PUBLIC','TASTE_DV_Properties','').
+isImportDeclaration('deploymentview::DV','PUBLIC','deploymentview::DV::Node2','').
 isProperty('NIL','APPLIES TO','deploymentview::DV','deploymentview','others','interfaceview.consumer_PI_data4M_producer_RI_data4M','Actual_Connection_Binding','(reference (ip_i))','').
 isProperty('NIL','APPLIES TO','deploymentview::DV','deploymentview','others','interfaceview.consumer_PI_dat2M_producer_RI_dat2M','Actual_Connection_Binding','(reference (ip_i))','').
 isProperty('NIL','APPLIES TO','deploymentview::DV','deploymentview','others','interfaceview.consumer_PI_data512k_producer_RI_data512k','Actual_Connection_Binding','(reference (ip_i))','').

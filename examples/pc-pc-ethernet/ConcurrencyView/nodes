@@ -1,0 +1,13 @@
+--  This file was generated automatically: DO NOT MODIFY IT !
+
+--  This file contains the description of the system distribution.
+--  It is an input file for the TASTE ORCHESTRATOR
+
+* consumer_partition PLATFORM_LINUX32
+consumer
+vt_consumer_data4m
+vt_consumer_dat2m
+vt_consumer_data512k
+vt_consumer_data16k
+* producer_partition PLATFORM_LINUX32
+producer

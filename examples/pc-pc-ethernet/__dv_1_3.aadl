@@ -5,40 +5,6 @@
 -- generated code: do not edit
 ---------------------------------------------------
 
-PACKAGE deploymentview::DV::Node2
-PUBLIC
-
-WITH ocarina_buses;
-WITH ocarina_drivers;
-WITH Taste;
-WITH Deployment;
-WITH TASTE_DV_Properties;
-PROCESS consumer_partition
-END consumer_partition;
-
-PROCESS IMPLEMENTATION consumer_partition.others
-END consumer_partition.others;
-
-DEVICE generic_sockets_ip_pohic
-EXTENDS ocarina_drivers::generic_sockets_ip
-FEATURES
-  link : REFINED TO REQUIRES BUS ACCESS ocarina_buses::ip.i {
-    Taste::coordinates => "187736 100551";
-  };
-PROPERTIES
-  Taste::Interface_Coordinates => "175417 133813" APPLIES TO link;
-  Deployment::Help => "Write your ASN.1 configuration here";
-  Deployment::Configuration => "{devname ""eth0"", address ""127.0.0.1"", port 5116}";
-  Deployment::Config => "/home/taste/tool-inst/include/ocarina/runtime/polyorb-hi-c/src/drivers/configuration/ip.asn";
-  Deployment::Version => "0.1beta";
-END generic_sockets_ip_pohic;
-
-DEVICE IMPLEMENTATION generic_sockets_ip_pohic.others
-EXTENDS ocarina_drivers::generic_sockets_ip.pohic
-END generic_sockets_ip_pohic.others;
-
-END deploymentview::DV::Node2;
-
 PACKAGE deploymentview::DV::Node1
 PUBLIC
 
@@ -73,46 +39,52 @@ END generic_sockets_ip_pohic.others;
 
 END deploymentview::DV::Node1;
 
+PACKAGE deploymentview::DV::Node2
+PUBLIC
+
+WITH ocarina_buses;
+WITH ocarina_drivers;
+WITH Taste;
+WITH Deployment;
+WITH TASTE_DV_Properties;
+PROCESS consumer_partition
+END consumer_partition;
+
+PROCESS IMPLEMENTATION consumer_partition.others
+END consumer_partition.others;
+
+DEVICE generic_sockets_ip_pohic
+EXTENDS ocarina_drivers::generic_sockets_ip
+FEATURES
+  link : REFINED TO REQUIRES BUS ACCESS ocarina_buses::ip.i {
+    Taste::coordinates => "191037 103812";
+  };
+PROPERTIES
+  Taste::Interface_Coordinates => "175417 134357" APPLIES TO link;
+  Deployment::Help => "Write your ASN.1 configuration here";
+  Deployment::Configuration => "{devname ""eth0"", address ""127.0.0.1"", port 5116 }";
+  Deployment::Config => "/home/taste/tool-inst/include/ocarina/runtime/polyorb-hi-c/src/drivers/configuration/ip.asn";
+  Deployment::Version => "0.1beta";
+END generic_sockets_ip_pohic;
+
+DEVICE IMPLEMENTATION generic_sockets_ip_pohic.others
+EXTENDS ocarina_drivers::generic_sockets_ip.pohic
+END generic_sockets_ip_pohic.others;
+
+END deploymentview::DV::Node2;
+
 PACKAGE deploymentview::DV
 PUBLIC
 
 WITH interfaceview::IV;
 WITH ocarina_processors_x86;
-WITH deploymentview::DV::Node2;
 WITH deploymentview::DV::Node1;
+WITH deploymentview::DV::Node2;
 WITH ocarina_buses;
 WITH Taste;
 WITH Deployment;
 WITH interfaceview::IV;
 WITH TASTE_DV_Properties;
-SYSTEM Node2
-FEATURES
-  generic_sockets_ip_pohic_ip_i : REQUIRES BUS ACCESS ocarina_buses::ip.i;
-END Node2;
-
-SYSTEM IMPLEMENTATION Node2.others
-SUBCOMPONENTS
-  IV_consumer : SYSTEM interfaceview::IV::consumer.others {
-    Taste::FunctionName => "consumer";
-  };
-  consumer_partition : PROCESS deploymentview::DV::Node2::consumer_partition.others {
-    Taste::coordinates => "175288 62464 199657 76951";
-    Deployment::Port_Number => 0;
-  };
-  x86_linux32 : PROCESSOR ocarina_processors_x86::x86.linux32 {
-    Taste::coordinates => "172242 58325 202703 79021";
-  };
-  generic_sockets_ip_pohic : DEVICE deploymentview::DV::Node2::generic_sockets_ip_pohic.others {
-    Taste::coordinates => "173849 85544 200950 100551";
-  };
-CONNECTIONS
-  generic_sockets_ip_pohic_ip_i_link : BUS ACCESS generic_sockets_ip_pohic_ip_i -> generic_sockets_ip_pohic.link;
-PROPERTIES
-  Taste::APLC_Binding => (reference (consumer_partition)) APPLIES TO IV_consumer;
-  Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO consumer_partition;
-  Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO generic_sockets_ip_pohic;
-END Node2.others;
-
 SYSTEM Node1
 FEATURES
   generic_sockets_ip_pohic_ip_i : REQUIRES BUS ACCESS ocarina_buses::ip.i;
@@ -141,27 +113,55 @@ PROPERTIES
   Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO generic_sockets_ip_pohic;
 END Node1.others;
 
+SYSTEM Node2
+FEATURES
+  generic_sockets_ip_pohic_ip_i : REQUIRES BUS ACCESS ocarina_buses::ip.i;
+END Node2;
+
+SYSTEM IMPLEMENTATION Node2.others
+SUBCOMPONENTS
+  IV_consumer : SYSTEM interfaceview::IV::consumer.others {
+    Taste::FunctionName => "consumer";
+  };
+  consumer_partition : PROCESS deploymentview::DV::Node2::consumer_partition.others {
+    Taste::coordinates => "180054 64430 205401 80660";
+    Deployment::Port_Number => 0;
+  };
+  x86_linux32 : PROCESSOR ocarina_processors_x86::x86.linux32 {
+    Taste::coordinates => "176886 59793 208569 82979";
+  };
+  generic_sockets_ip_pohic : DEVICE deploymentview::DV::Node2::generic_sockets_ip_pohic.others {
+    Taste::coordinates => "178206 90611 205329 103812";
+  };
+CONNECTIONS
+  generic_sockets_ip_pohic_ip_i_link : BUS ACCESS generic_sockets_ip_pohic_ip_i -> generic_sockets_ip_pohic.link;
+PROPERTIES
+  Taste::APLC_Binding => (reference (consumer_partition)) APPLIES TO IV_consumer;
+  Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO consumer_partition;
+  Actual_Processor_Binding => (reference (x86_linux32)) APPLIES TO generic_sockets_ip_pohic;
+END Node2.others;
+
 SYSTEM deploymentview
 END deploymentview;
 
 SYSTEM IMPLEMENTATION deploymentview.others
 SUBCOMPONENTS
-  Node2 : SYSTEM Node2.others {
-    Taste::coordinates => "168434 52412 206511 105255";
-  };
   Node1 : SYSTEM Node1.others {
     Taste::coordinates => "94968 52860 133269 105479";
+  };
+  Node2 : SYSTEM Node2.others {
+    Taste::coordinates => "172926 53168 212529 107893";
   };
   ip_i : BUS ocarina_buses::ip.i {
     Taste::coordinates => "118525 127877 175417 141540";
   };
   interfaceview : SYSTEM interfaceview::IV::interfaceview.others;
 CONNECTIONS
-  Connection1 : BUS ACCESS ip_i -> Node2.generic_sockets_ip_pohic_ip_i {
-    Taste::coordinates => "187736 100551 187736 133813 175417 133813";
-  };
   Connection2 : BUS ACCESS ip_i -> Node1.generic_sockets_ip_pohic_ip_i {
     Taste::coordinates => "111358 101447 111358 134709 118525 134709";
+  };
+  Connection1 : BUS ACCESS ip_i -> Node2.generic_sockets_ip_pohic_ip_i {
+    Taste::coordinates => "191037 103812 191037 134357 175417 134357";
   };
 PROPERTIES
   Actual_Connection_Binding => (reference (ip_i)) APPLIES TO interfaceview.consumer_PI_data4M_producer_RI_data4M;
