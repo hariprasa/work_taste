@@ -12,6 +12,7 @@
 #define __PO_HI_DRIVERS_RTEMS_UTILS_H__
 
 #include <po_hi_debug.h>
+#include <sys/ioctl.h>
 
 #define __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(fd,num,arg) \
         { int ioctl_ret ; \

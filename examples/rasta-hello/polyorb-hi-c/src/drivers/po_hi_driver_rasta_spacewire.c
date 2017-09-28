@@ -33,20 +33,46 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <fcntl.h>
+#include <errno.h>
 /* POSIX-style files */
 
 
 #include <rtems/bspIo.h>
 #include <ambapp.h>
 
+#ifdef GRLEON2
 #include <pci.h>
 #include <rasta.h>
 #include <grspw_rasta.h>
 #include <apbuart_rasta.h>
+#endif
+
+#ifdef GRLEON3
+#include <pci.h>
+#include <grspw.h>
+#endif
+
+#define DRVMGR_BUS_TYPE_AMBAPP 3	/* AMBA Plug & Play bus */
+#define DRIVER_ID_BUS_MASK 0x00000000000000FFULL
+#define DRIVER_ID_DEV_MASK 0x00FFFFFFFFFFFF00ULL
+#define VENDOR_GAISLER       1
+#define GAISLER_SPW2         0x029
+#define GAISLER_SPW          0x01f
+
+#define DRIVER_ID(busid, devid) ((unsigned long long) \
+        ((((unsigned long long)(devid) << 8) & DRIVER_ID_DEV_MASK) | \
+         ((unsigned long long)(busid) & DRIVER_ID_BUS_MASK)))
+
+#define DRIVER_AMBAPP_ID(vendor, device) \
+        DRIVER_ID(DRVMGR_BUS_TYPE_AMBAPP, ((((vendor) & 0xff) << 16) | ((device) & 0xfff)))
+
+#define DRIVER_AMBAPP_GAISLER_GRSPW_ID          DRIVER_AMBAPP_ID(VENDOR_GAISLER, GAISLER_SPW)
+#define DRIVER_AMBAPP_GAISLER_GRSPW2_ID         DRIVER_AMBAPP_ID(VENDOR_GAISLER, GAISLER_SPW2)
+
+
 /* Rasta includes from GAISLER drivers */
 
 #define __PO_HI_DRIVER_SPACEWIRE_RASTA_DEVICE "/dev/grspwrasta0"
-
  __po_hi_request_t   __po_hi_c_driver_spacewire_rasta_request;
 __po_hi_msg_t        __po_hi_c_driver_spacewire_rasta_poller_msg;
 int                  po_hi_c_driver_rasta_spacewire_fd[__PO_HI_NB_DEVICES];
@@ -97,7 +123,7 @@ extern unsigned int __po_hi_driver_rasta_bar0, __po_hi_driver_rasta_bar1;
 
 void __po_hi_rasta_interrrupt_register(void *handler, int irqno, void *arg);
 
-#ifdef RTEMS48
+#if defined RTEMS48 || defined RTEMS410
 extern amba_confarea_type* __po_hi_driver_rasta_common_get_bus ();
 #elif RTEMS411
 extern struct ambapp_bus * __po_hi_driver_rasta_common_get_bus ();
@@ -118,14 +144,27 @@ void __po_hi_c_driver_spacewire_rasta_init (__po_hi_device_id id)
 
    __po_hi_c_driver_rasta_common_init ();
 
+   /* Register GRSPW Driver */
+   static amba_confarea_type  *ambabus;
+   ambabus = __po_hi_driver_rasta_common_get_bus ();
+   int i;
+   i= grspw_register(ambabus);
+   amba_print_conf (ambabus);
+
+//   rtems_device_driver ret;
+//   ret=grspw_initialize(DRIVER_AMBAPP_GAISLER_GRSPW_ID, 0, NULL);
+//   ret=grspw_open(DRIVER_AMBAPP_GAISLER_GRSPW_ID, 0, NULL);
+
    __po_hi_transport_set_sending_func (id, __po_hi_c_driver_spacewire_rasta_sender);
 
    __PO_HI_DEBUG_DEBUG ("[RASTA SPACEWIRE] Open spacewire device %s ...", drv_conf->devname);
 
-   po_hi_c_driver_rasta_spacewire_fd[id] = open (drv_conf->devname, O_RDWR);
 
+//   po_hi_c_driver_rasta_spacewire_fd[id] = open (drv_conf->devname, O_RDWR);
+   po_hi_c_driver_rasta_spacewire_fd[id] = open ("/dev/grspw0", O_RDWR);
    if (po_hi_c_driver_rasta_spacewire_fd[id] < 0)
    {
+    printk("Error Opening errno: %s \n", strerror(errno));
       __PO_HI_DEBUG_DEBUG (" ERROR !\n");
       return;
    }
@@ -146,7 +185,8 @@ void __po_hi_c_driver_spacewire_rasta_init (__po_hi_device_id id)
    __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd, SPACEWIRE_IOCTRL_SET_TXBLOCK_ON_FULL, 1);          // Blocking write if full
    __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd, SPACEWIRE_IOCTRL_SET_PROMISCUOUS, 1);              // Receive from any source
 */
-   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_COREFREQ,30000); 
+
+/*   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_COREFREQ,30000); 
    __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_NODEADDR, node_addr);
    __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_RXBLOCK,0);
    __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_TXBLOCK,0);
@@ -155,6 +195,19 @@ void __po_hi_c_driver_spacewire_rasta_init (__po_hi_device_id id)
 
    __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id], SPACEWIRE_IOCTRL_SET_PROMISCUOUS, 1);              // Receive from any source
 
+
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_START,2000);
+*/
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_STOP,NULL); 
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_DISCONNECT,43);
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_COREFREQ,0);  
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_TXBLOCK,1);
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_RXBLOCK,1);
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],  SPACEWIRE_IOCTRL_SET_NODEADDR, node_addr);
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id], SPACEWIRE_IOCTRL_SET_PROMISCUOUS,1);
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id], SPACEWIRE_IOCTRL_SET_CLKDIV, 0);
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_TXBLOCK_ON_FULL,1);
+   __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_SET_RM_PROT_ID,0);
 
    __PO_HI_DRIVERS_RTEMS_UTILS_IOCTL(po_hi_c_driver_rasta_spacewire_fd[id],SPACEWIRE_IOCTRL_START,2000);
 }

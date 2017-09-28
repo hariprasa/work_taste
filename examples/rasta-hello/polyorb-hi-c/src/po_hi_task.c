@@ -523,11 +523,12 @@ rtems_id __po_hi_rtems_create_thread (__po_hi_priority_t priority,
 {
   rtems_id rid;
   rtems_name tname;
-  tname= rtems_build_name( 'T', 'A', nb_tasks, ' ' );
-  if (rtems_task_create (&tname, 1,//priority, //1
-                         RTEMS_MINIMUM_STACK_SIZE,
-			 RTEMS_DEFAULT_MODES,
-			 //(RTEMS_PREEMPT | RTEMS_NO_TIMESLICE | RTEMS_NO_ASR | RTEMS_INTERRUPT_LEVEL(0)),
+  
+  tname= rtems_build_name( 'T', 'A', 48, 48 + nb_tasks );
+  if (rtems_task_create (tname, priority, //1
+                         stack_size, //RTEMS_MINIMUM_STACK_SIZE,
+			 //RTEMS_DEFAULT_MODES,
+			 (RTEMS_PREEMPT | RTEMS_NO_TIMESLICE | RTEMS_NO_ASR | RTEMS_INTERRUPT_LEVEL(0)),
                          RTEMS_DEFAULT_ATTRIBUTES | RTEMS_NO_FLOATING_POINT, &rid)
       != RTEMS_SUCCESSFUL)
     {
@@ -535,6 +536,7 @@ rtems_id __po_hi_rtems_create_thread (__po_hi_priority_t priority,
       return __PO_HI_ERROR_CREATE_TASK;
     }
 
+   printk("******TASK CREATED***NAME:%s ***ID:%x*****\n",tname,rid);
 #ifdef RTEMS411
   /* Thread affinity API for SMP systems appeared in RTEMS 4.11,
      section 25 of RTEMS Applications C User's Guide .
@@ -557,7 +559,7 @@ rtems_id __po_hi_rtems_create_thread (__po_hi_priority_t priority,
       __DEBUGMSG ("ERROR when starting the task\n");
       return __PO_HI_ERROR_CREATE_TASK;
     }
-
+ 
    return rid;
 }
 #endif
@@ -612,6 +614,8 @@ int __po_hi_create_generic_task (const __po_hi_task_id      id,
 #elif defined (RTEMS_PURE)
       (void) arg;
       __po_hi_rtems_create_thread (priority, stack_size, core_id, start_routine, arg);
+      rtems_stack_checker_report_usage();
+      nb_tasks++; //to get correct task name eg: TA'x'
       return (__PO_HI_SUCCESS);
 #else
       return (__PO_HI_UNAVAILABLE);
@@ -632,6 +636,8 @@ int __po_hi_create_generic_task (const __po_hi_task_id      id,
 #elif defined (RTEMS_PURE)
       my_task->rtems_id = __po_hi_rtems_create_thread
         (priority, stack_size, core_id, start_routine, arg);
+
+        rtems_stack_checker_report_usage();
 #elif defined (_WIN32)
       my_task->tid = __po_hi_win32_create_thread
         (id, priority, stack_size, start_routine, arg);
@@ -646,17 +652,6 @@ int __po_hi_create_generic_task (const __po_hi_task_id      id,
       nb_tasks++;
     }
 
-  rtems_task_priority  the_priority; 
-  if (nb_tasks == __PO_HI_NB_TASKS)
-  {
-    rtems_task_set_priority(RTEMS_SELF, 50, &the_priority);
-    printk("main-- current priority : %d, will be set to 50\n", (int)the_priority);
-    rtems_task_set_priority(RTEMS_SELF, RTEMS_CURRENT_PRIORITY, &the_priority); 
-    printk("main-- check current priority:%d\n", (int)the_priority); 
-    
-    rtems_task_wake_after(RTEMS_YIELD_PROCESSOR);
-  }  
-  
   return (__PO_HI_SUCCESS);
 }
 

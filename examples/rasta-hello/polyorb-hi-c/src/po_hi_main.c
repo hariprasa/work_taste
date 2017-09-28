@@ -361,8 +361,11 @@ int __po_hi_wait_initialization (void)
 
 #elif defined (RTEMS_PURE)
   rtems_status_code ret;
-  
-  printk ("***************Task wait for the barrier**************\n");
+  rtems_id self_id;
+
+  ret = rtems_task_ident( RTEMS_SELF, RTEMS_SEARCH_ALL_NODES, &self_id);
+
+  printk ("***************Task wait for the barrier**** ID:%x **********\n",self_id);
   __DEBUGMSG ("[MAIN] Task wait for the barrier\n");
   ret = rtems_barrier_wait (__po_hi_main_initialization_barrier, RTEMS_WAIT);
   if (ret != RTEMS_SUCCESSFUL)

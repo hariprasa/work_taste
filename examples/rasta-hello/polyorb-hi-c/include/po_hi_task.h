@@ -96,7 +96,7 @@
    #include <rtems.h>
    #include <inttypes.h>
    #include <po_hi_time.h>
-   #define __PO_HI_DEFAULT_PRIORITY RTEMS_NO_PRIORITY
+   #define __PO_HI_DEFAULT_PRIORITY RTEMS_NO_PRIORITY 
    #define __PO_HI_MAX_PRIORITY RTEMS_NO_PRIORITY
    #define __PO_HI_MIN_PRIORITY RTEMS_NO_PRIORITY
 #elif defined(XENO_NATIVE)

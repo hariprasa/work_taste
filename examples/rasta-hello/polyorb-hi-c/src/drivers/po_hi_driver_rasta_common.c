@@ -15,14 +15,14 @@
      (defined __PO_HI_NEED_DRIVER_SERIAL_RASTA))
 
 #include <rtems/bspIo.h>
-#include <pci.h>
-#include <rasta.h>
 #include <ambapp.h>
-#include <grspw_rasta.h>
 
+#ifdef GRLEON2
+#include <grspw_rasta.h>
 #include <pci.h>
 #include <rasta.h>
 #include <apbuart_rasta.h>
+#endif
 /* Rasta includes from GAISLER drivers */
 
 #include <po_hi_debug.h>
@@ -52,11 +52,12 @@
 
 int __po_hi_c_driver_rasta_common_is_init = 0;
 
-#ifdef RTEMS48
+#if defined RTEMS48 || defined RTEMS410 
 int apbuart_rasta_register(amba_confarea_type *bus);
 static amba_confarea_type abus;
-extern LEON3_IrqCtrl_Regs_Map *irq;
-extern LEON_Register_Map      *regs;
+
+//extern LEON3_IrqCtrl_Regs_Map *irq;
+//extern LEON_Register_Map      *regs;
 
 amba_confarea_type* __po_hi_driver_rasta_common_get_bus ()
 {
@@ -321,7 +322,12 @@ void __po_hi_c_driver_rasta_common_init ()
       __PO_HI_DEBUG_DEBUG ("[RASTA COMMON] RASTA already initialized, pass init\n");
       return;
    }
+#ifdef GRLEON3
+  /* initialize the amba bus driver*/  
+  amba_initialize();
+#endif
 
+#ifdef GRLEON2
    __PO_HI_DEBUG_DEBUG ("[RASTA COMMON] Init\n");
    init_pci();
    __PO_HI_DEBUG_DEBUG ("[RASTA COMMON] Initializing RASTA ...");
@@ -331,11 +337,11 @@ void __po_hi_c_driver_rasta_common_init ()
     return;
   }
   */
-
   if  (rasta_register() ){
     __PO_HI_DEBUG_DEBUG(" ERROR !\n");
     return;
   }
+#endif
 
     __PO_HI_DEBUG_DEBUG (" OK !\n");
 

@@ -50,7 +50,7 @@ __po_hi_inetnode_t nodes[__PO_HI_NB_DEVICES];
 __po_hi_inetnode_t rnodes[__PO_HI_NB_DEVICES];
 
 __po_hi_device_id leon_eth_device_id;
-
+extern void rtems_stack_checker_report_usage(void);
 
 #if defined (__PO_HI_NEED_DRIVER_ETH_LEON) || \
     defined (__PO_HI_NEED_DRIVER_ETH_LEON_RECEIVER)
@@ -60,14 +60,14 @@ __po_hi_device_id leon_eth_device_id;
                                             timeout.tv_usec = 0; \
                                             setsockopt (mysocket, SOL_SOCKET, SO_RCVTIMEO, (char *)&timeout,sizeof (timeout)); }
 
-#define RTEMS_BSP_NETWORK_DRIVER_ATTACH RTEMS_BSP_NETWORK_DRIVER_ATTACH_SMC91111
+//#define RTEMS_BSP_NETWORK_DRIVER_ATTACH RTEMS_BSP_NETWORK_DRIVER_ATTACH_SMC91111
 
-#define RTEMS_BSP_NETWORK_DRIVER_NAME "open_eth1"
+//#define RTEMS_BSP_NETWORK_DRIVER_NAME "open_eth1"
 
 #include <bsp.h>
 #include <rtems/rtems_bsdnet.h>
 
-#ifdef RTEMS48
+#if defined RTEMS48 || defined RTEMS410
 extern void rtems_bsdnet_loopattach();
 #else
 extern void rtems_bsdnet_initialize_loop();
@@ -75,7 +75,7 @@ extern void rtems_bsdnet_initialize_loop();
 
 static struct rtems_bsdnet_ifconfig loopback_config = {
    "lo0",            /* name */
-#ifdef RTEMS48
+#if defined RTEMS48 || defined RTEMS410
    rtems_bsdnet_loopattach,   /* attach function */
 #else
    rtems_bsdnet_initialize_loop,
@@ -90,8 +90,8 @@ static struct rtems_bsdnet_ifconfig loopback_config = {
  * Default network interface
  */
 static struct rtems_bsdnet_ifconfig netdriver_config = {
-   RTEMS_BSP_NETWORK_DRIVER_NAME,      /* name */
-   RTEMS_BSP_NETWORK_DRIVER_ATTACH, /* attach function */
+   RTEMS_BSP_NETWORK_DRIVER_NAME_GRETH,      /* name */
+   RTEMS_BSP_NETWORK_DRIVER_ATTACH_GRETH, /* attach function */
    0, /* link to next interface */
    /*
 #ifdef RTEMS48
@@ -119,7 +119,7 @@ static struct rtems_bsdnet_ifconfig netdriver_config = {
 struct rtems_bsdnet_config rtems_bsdnet_config = {
    &netdriver_config,
    NULL,
-#ifdef RTEMS48
+#if defined RTEMS48 || defined RTEMS410
    100,        /* Default network task priority */
 #else
    150,
@@ -223,7 +223,7 @@ void __po_hi_c_driver_eth_leon_poller (const __po_hi_device_id dev_id)
       }
    }
    __DEBUGMSG ("[DRIVER ETH] Poller initialization finished, waiting for other tasks\n");
-   __po_hi_wait_initialization ();
+//   __po_hi_wait_initialization ();
    __DEBUGMSG ("[DRIVER ETH] Other tasks are initialized, let's start the polling !\n");
 
    /*
@@ -232,6 +232,7 @@ void __po_hi_c_driver_eth_leon_poller (const __po_hi_device_id dev_id)
     */
    while (1)
    {
+
       FD_ZERO( &selector );
       for (dev = 0; dev < __PO_HI_NB_DEVICES ; dev++)
       {
@@ -352,11 +353,13 @@ void __po_hi_c_driver_eth_leon_init (__po_hi_device_id id)
 
 
   rtems_bsdnet_initialize_network ();
+
   /*
 #ifdef __PO_HI_DEBUG_INFO
    rtems_bsdnet_show_if_stats ();
    rtems_bsdnet_show_inet_routes ();
    rtems_bsdnet_show_ip_stats ();
+   rtems_bsdnet_show_mbuf_stats ();
 #endif
 */
 
@@ -417,8 +420,10 @@ void __po_hi_c_driver_eth_leon_init (__po_hi_device_id id)
 
       __po_hi_initialize_add_task ();
 
-      __po_hi_create_generic_task
-        (-1, 0,__PO_HI_MAX_PRIORITY, 0, 0, (void* (*)(void)) __po_hi_c_driver_eth_leon_poller, NULL);
+//      __po_hi_create_generic_task
+//        (-1, 0,__PO_HI_MAX_PRIORITY, 0, 0, (void* (*)(void)) __po_hi_c_driver_eth_leon_poller, NULL);
+
+	__po_hi_create_generic_task(-1, 0, 2, 2*RTEMS_MINIMUM_STACK_SIZE, 0, (void* (*)(void)) __po_hi_c_driver_eth_leon_poller, NULL);
    }
 
    /*
