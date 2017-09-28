@@ -16,9 +16,9 @@ void consumer_startup();
 void consumer_PI_data4M(const asn1SccMyData4M *);
 
 void consumer_PI_data2M(const asn1SccMyData2M *);
-
+ 
 void consumer_PI_data512k(const asn1SccMyData512k *);
-
+ 
 void consumer_PI_data16k(const asn1SccMyData16k *);
 
 #ifdef __cplusplus

@@ -15,7 +15,7 @@
 
 CWD=$(pwd)
 
-if [ -t 0 ] ; then
+if [ -t 1 ] ; then
     COLORON="\e[1m\e[32m"
     COLOROFF="\e[0m"
 else

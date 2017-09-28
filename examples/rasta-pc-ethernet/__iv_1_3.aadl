@@ -31,16 +31,6 @@ END RI_data4M;
 SUBPROGRAM IMPLEMENTATION RI_data4M.others
 END RI_data4M.others;
 
-SUBPROGRAM RI_data2M
-FEATURES
-  test2M : IN PARAMETER DataView::MyData2M {
-    Taste::encoding => NATIVE;
-  };
-END RI_data2M;
-
-SUBPROGRAM IMPLEMENTATION RI_data2M.others
-END RI_data2M.others;
-
 SUBPROGRAM RI_data512k
 FEATURES
   test512k : IN PARAMETER DataView::MyData512k {
@@ -60,6 +50,16 @@ END RI_data16k;
 
 SUBPROGRAM IMPLEMENTATION RI_data16k.others
 END RI_data16k.others;
+
+SUBPROGRAM RI_data2M
+FEATURES
+  test2M : IN PARAMETER DataView::MyData2M {
+    Taste::encoding => NATIVE;
+  };
+END RI_data2M;
+
+SUBPROGRAM IMPLEMENTATION RI_data2M.others
+END RI_data2M.others;
 
 END interfaceview::FV::producer;
 
@@ -83,20 +83,6 @@ PROPERTIES
   Compute_Execution_Time => 0 ms .. 5 ms;
 END PI_data4M.others;
 
-SUBPROGRAM PI_data2M
-FEATURES
-  test2M : IN PARAMETER DataView::MyData2M {
-    Taste::encoding => NATIVE;
-  };
-PROPERTIES
-  Taste::Associated_Queue_Size => 2;
-END PI_data2M;
-
-SUBPROGRAM IMPLEMENTATION PI_data2M.others
-PROPERTIES
-  Compute_Execution_Time => 0 ms .. 5 ms;
-END PI_data2M.others;
-
 SUBPROGRAM PI_data512k
 FEATURES
   test512k : IN PARAMETER DataView::MyData512k {
@@ -108,7 +94,7 @@ END PI_data512k;
 
 SUBPROGRAM IMPLEMENTATION PI_data512k.others
 PROPERTIES
-  Compute_Execution_Time => 0 ms .. 5 ms;
+  Compute_Execution_Time => 0 ms .. 10 ms;
 END PI_data512k.others;
 
 SUBPROGRAM PI_data16k
@@ -122,8 +108,22 @@ END PI_data16k;
 
 SUBPROGRAM IMPLEMENTATION PI_data16k.others
 PROPERTIES
-  Compute_Execution_Time => 0 ms .. 5 ms;
+  Compute_Execution_Time => 0 ms .. 10 ms;
 END PI_data16k.others;
+
+SUBPROGRAM PI_data2M
+FEATURES
+  test2M : IN PARAMETER DataView::MyData2M {
+    Taste::encoding => NATIVE;
+  };
+PROPERTIES
+  Taste::Associated_Queue_Size => 2;
+END PI_data2M;
+
+SUBPROGRAM IMPLEMENTATION PI_data2M.others
+PROPERTIES
+  Compute_Execution_Time => 0 ms .. 10 ms;
+END PI_data2M.others;
 
 END interfaceview::FV::consumer;
 
@@ -141,7 +141,7 @@ FEATURES
     Taste::coordinates => "107737 54652";
     Taste::RCMoperationKind => cyclic;
     Taste::RCMperiod => 1000 ms;
-    Taste::Deadline => 1000 ms;
+    Taste::Deadline => 10000 ms;
     Taste::InterfaceName => "trigger";
   };
   RI_data4M : REQUIRES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data4M.others {
@@ -150,22 +150,22 @@ FEATURES
     Taste::InterfaceName => "data4M";
     Taste::labelInheritance => "true";
   };
-  RI_data2M : REQUIRES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data2M.others {
-    Taste::coordinates => "129910 78172";
-    Taste::RCMoperationKind => any;
-    Taste::InterfaceName => "data2M";
-    Taste::labelInheritance => "true";
-  };
   RI_data512k : REQUIRES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data512k.others {
-    Taste::coordinates => "129910 84668";
+    Taste::coordinates => "129910 76230";
     Taste::RCMoperationKind => any;
     Taste::InterfaceName => "data512k";
     Taste::labelInheritance => "true";
   };
   RI_data16k : REQUIRES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data16k.others {
-    Taste::coordinates => "129910 90939";
+    Taste::coordinates => "129910 80167";
     Taste::RCMoperationKind => any;
     Taste::InterfaceName => "data16k";
+    Taste::labelInheritance => "true";
+  };
+  RI_data2M : REQUIRES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data2M.others {
+    Taste::coordinates => "129910 84577";
+    Taste::RCMoperationKind => any;
+    Taste::InterfaceName => "data2M";
     Taste::labelInheritance => "true";
   };
 PROPERTIES
@@ -185,30 +185,30 @@ FEATURES
   PI_data4M : PROVIDES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data4M.others {
     Taste::coordinates => "166643 71451";
     Taste::RCMoperationKind => sporadic;
-    Taste::RCMperiod => 100 ms;
-    Taste::Deadline => 100 ms;
+    Taste::RCMperiod => 1000 ms;
+    Taste::Deadline => 1000 ms;
     Taste::InterfaceName => "data4M";
   };
-  PI_data2M : PROVIDES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data2M.others {
-    Taste::coordinates => "166643 78171";
-    Taste::RCMoperationKind => sporadic;
-    Taste::RCMperiod => 100 ms;
-    Taste::Deadline => 100 ms;
-    Taste::InterfaceName => "data2M";
-  };
   PI_data512k : PROVIDES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data512k.others {
-    Taste::coordinates => "166643 84667";
+    Taste::coordinates => "166643 76246";
     Taste::RCMoperationKind => sporadic;
-    Taste::RCMperiod => 100 ms;
-    Taste::Deadline => 100 ms;
+    Taste::RCMperiod => 1000 ms;
+    Taste::Deadline => 1000 ms;
     Taste::InterfaceName => "data512k";
   };
   PI_data16k : PROVIDES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data16k.others {
-    Taste::coordinates => "166643 90939";
+    Taste::coordinates => "166643 80183";
     Taste::RCMoperationKind => sporadic;
-    Taste::RCMperiod => 100 ms;
-    Taste::Deadline => 100 ms;
+    Taste::RCMperiod => 1000 ms;
+    Taste::Deadline => 1000 ms;
     Taste::InterfaceName => "data16k";
+  };
+  PI_data2M : PROVIDES SUBPROGRAM ACCESS interfaceview::FV::consumer::PI_data2M.others {
+    Taste::coordinates => "166643 84593";
+    Taste::RCMoperationKind => sporadic;
+    Taste::RCMperiod => 1000 ms;
+    Taste::Deadline => 1000 ms;
+    Taste::InterfaceName => "data2M";
   };
 PROPERTIES
   Source_Language => (C);
@@ -218,14 +218,14 @@ END consumer;
 SYSTEM IMPLEMENTATION consumer.others
 SUBCOMPONENTS
   data4M_impl : SUBPROGRAM interfaceview::FV::consumer::PI_data4M.others;
-  data2M_impl : SUBPROGRAM interfaceview::FV::consumer::PI_data2M.others;
   data512k_impl : SUBPROGRAM interfaceview::FV::consumer::PI_data512k.others;
   data16k_impl : SUBPROGRAM interfaceview::FV::consumer::PI_data16k.others;
+  data2M_impl : SUBPROGRAM interfaceview::FV::consumer::PI_data2M.others;
 CONNECTIONS
   OpToPICnx_data4M_impl : SUBPROGRAM ACCESS data4M_impl -> PI_data4M;
-  OpToPICnx_data2M_impl : SUBPROGRAM ACCESS data2M_impl -> PI_data2M;
   OpToPICnx_data512k_impl : SUBPROGRAM ACCESS data512k_impl -> PI_data512k;
   OpToPICnx_data16k_impl : SUBPROGRAM ACCESS data16k_impl -> PI_data16k;
+  OpToPICnx_data2M_impl : SUBPROGRAM ACCESS data2M_impl -> PI_data2M;
 END consumer.others;
 
 SYSTEM interfaceview
@@ -243,14 +243,14 @@ CONNECTIONS
   consumer_PI_data4M_producer_RI_data4M : SUBPROGRAM ACCESS consumer.PI_data4M -> producer.RI_data4M {
     Taste::coordinates => "129910 71452 148276 71452 148276 71451 166643 71451";
   };
-  consumer_PI_data2M_producer_RI_data2M : SUBPROGRAM ACCESS consumer.PI_data2M -> producer.RI_data2M {
-    Taste::coordinates => "129910 78172 148276 78172 148276 78171 166643 78171";
-  };
   consumer_PI_data512k_producer_RI_data512k : SUBPROGRAM ACCESS consumer.PI_data512k -> producer.RI_data512k {
-    Taste::coordinates => "129910 84668 148276 84668 148276 84667 166643 84667";
+    Taste::coordinates => "129910 76230 148276 76230 148276 76246 166643 76246";
   };
   consumer_PI_data16k_producer_RI_data16k : SUBPROGRAM ACCESS consumer.PI_data16k -> producer.RI_data16k {
-    Taste::coordinates => "129910 90939 148276 90939 148276 90939 166643 90939";
+    Taste::coordinates => "129910 80167 148276 80167 148276 80183 166643 80183";
+  };
+  consumer_PI_data2M_producer_RI_data2M : SUBPROGRAM ACCESS consumer.PI_data2M -> producer.RI_data2M {
+    Taste::coordinates => "129910 84577 148276 84577 148276 84593 166643 84593";
   };
 END interfaceview.others;
 

@@ -11,6 +11,150 @@ extern "C" {
 
 
 
+typedef asn1SccSint asn1SccT_Int32;
+
+#define asn1SccT_Int32_REQUIRED_BYTES_FOR_ENCODING       4 
+#define asn1SccT_Int32_REQUIRED_BITS_FOR_ENCODING        32
+#define asn1SccT_Int32_REQUIRED_BYTES_FOR_ACN_ENCODING   4 
+#define asn1SccT_Int32_REQUIRED_BITS_FOR_ACN_ENCODING    32
+#define asn1SccT_Int32_REQUIRED_BYTES_FOR_XER_ENCODING   39
+
+void asn1SccT_Int32_Initialize(asn1SccT_Int32* pVal);
+flag asn1SccT_Int32_IsConstraintValid(const asn1SccT_Int32* val, int* pErrCode);
+#ifndef ERR_asn1SccT_Int32 
+#define ERR_asn1SccT_Int32		1001  /*(-2147483648 .. 2147483647)*/
+#endif
+
+typedef asn1SccUint asn1SccT_UInt32;
+
+#define asn1SccT_UInt32_REQUIRED_BYTES_FOR_ENCODING       4 
+#define asn1SccT_UInt32_REQUIRED_BITS_FOR_ENCODING        32
+#define asn1SccT_UInt32_REQUIRED_BYTES_FOR_ACN_ENCODING   4 
+#define asn1SccT_UInt32_REQUIRED_BITS_FOR_ACN_ENCODING    32
+#define asn1SccT_UInt32_REQUIRED_BYTES_FOR_XER_ENCODING   41
+
+void asn1SccT_UInt32_Initialize(asn1SccT_UInt32* pVal);
+flag asn1SccT_UInt32_IsConstraintValid(const asn1SccT_UInt32* val, int* pErrCode);
+#ifndef ERR_asn1SccT_UInt32 
+#define ERR_asn1SccT_UInt32		1002  /*(0 .. 4294967295)*/
+#endif
+
+typedef asn1SccSint asn1SccT_Int8;
+
+#define asn1SccT_Int8_REQUIRED_BYTES_FOR_ENCODING       1 
+#define asn1SccT_Int8_REQUIRED_BITS_FOR_ENCODING        8
+#define asn1SccT_Int8_REQUIRED_BYTES_FOR_ACN_ENCODING   1 
+#define asn1SccT_Int8_REQUIRED_BITS_FOR_ACN_ENCODING    8
+#define asn1SccT_Int8_REQUIRED_BYTES_FOR_XER_ENCODING   37
+
+void asn1SccT_Int8_Initialize(asn1SccT_Int8* pVal);
+flag asn1SccT_Int8_IsConstraintValid(const asn1SccT_Int8* val, int* pErrCode);
+#ifndef ERR_asn1SccT_Int8 
+#define ERR_asn1SccT_Int8		1003  /*(-128 .. 127)*/
+#endif
+
+typedef asn1SccUint asn1SccT_UInt8;
+
+#define asn1SccT_UInt8_REQUIRED_BYTES_FOR_ENCODING       1 
+#define asn1SccT_UInt8_REQUIRED_BITS_FOR_ENCODING        8
+#define asn1SccT_UInt8_REQUIRED_BYTES_FOR_ACN_ENCODING   1 
+#define asn1SccT_UInt8_REQUIRED_BITS_FOR_ACN_ENCODING    8
+#define asn1SccT_UInt8_REQUIRED_BYTES_FOR_XER_ENCODING   39
+
+void asn1SccT_UInt8_Initialize(asn1SccT_UInt8* pVal);
+flag asn1SccT_UInt8_IsConstraintValid(const asn1SccT_UInt8* val, int* pErrCode);
+#ifndef ERR_asn1SccT_UInt8 
+#define ERR_asn1SccT_UInt8		1004  /*(0 .. 255)*/
+#endif
+
+typedef asn1SccT_UInt8 asn1SccMyInteger;
+
+#define asn1SccMyInteger_REQUIRED_BYTES_FOR_ENCODING       1 
+#define asn1SccMyInteger_REQUIRED_BITS_FOR_ENCODING        8
+#define asn1SccMyInteger_REQUIRED_BYTES_FOR_ACN_ENCODING   1 
+#define asn1SccMyInteger_REQUIRED_BITS_FOR_ACN_ENCODING    8
+#define asn1SccMyInteger_REQUIRED_BYTES_FOR_XER_ENCODING   43
+
+void asn1SccMyInteger_Initialize(asn1SccMyInteger* pVal);
+flag asn1SccMyInteger_IsConstraintValid(const asn1SccMyInteger* val, int* pErrCode);
+
+
+typedef struct {    
+    asn1SccMyInteger arr[16];
+} asn1SccMyData16k;
+
+#define asn1SccMyData16k_REQUIRED_BYTES_FOR_ENCODING       16 
+#define asn1SccMyData16k_REQUIRED_BITS_FOR_ENCODING        128
+#define asn1SccMyData16k_REQUIRED_BYTES_FOR_ACN_ENCODING   16 
+#define asn1SccMyData16k_REQUIRED_BITS_FOR_ACN_ENCODING    128
+#define asn1SccMyData16k_REQUIRED_BYTES_FOR_XER_ENCODING   711
+
+void asn1SccMyData16k_Initialize(asn1SccMyData16k* pVal);
+flag asn1SccMyData16k_IsConstraintValid(const asn1SccMyData16k* val, int* pErrCode);
+#ifndef ERR_asn1SccMyData16k 
+#define ERR_asn1SccMyData16k		1005  /*(SIZE(16))*/
+#endif
+
+typedef struct {    
+    asn1SccMyInteger arr[10];
+} asn1SccMyData512k;
+
+#define asn1SccMyData512k_REQUIRED_BYTES_FOR_ENCODING       10 
+#define asn1SccMyData512k_REQUIRED_BITS_FOR_ENCODING        80
+#define asn1SccMyData512k_REQUIRED_BYTES_FOR_ACN_ENCODING   10 
+#define asn1SccMyData512k_REQUIRED_BITS_FOR_ACN_ENCODING    80
+#define asn1SccMyData512k_REQUIRED_BYTES_FOR_XER_ENCODING   455
+
+void asn1SccMyData512k_Initialize(asn1SccMyData512k* pVal);
+flag asn1SccMyData512k_IsConstraintValid(const asn1SccMyData512k* val, int* pErrCode);
+#ifndef ERR_asn1SccMyData512k 
+#define ERR_asn1SccMyData512k		1006  /*(SIZE(10))*/
+#endif
+
+typedef struct {    
+    asn1SccMyInteger arr[10];
+} asn1SccMyData2M;
+
+#define asn1SccMyData2M_REQUIRED_BYTES_FOR_ENCODING       10 
+#define asn1SccMyData2M_REQUIRED_BITS_FOR_ENCODING        80
+#define asn1SccMyData2M_REQUIRED_BYTES_FOR_ACN_ENCODING   10 
+#define asn1SccMyData2M_REQUIRED_BITS_FOR_ACN_ENCODING    80
+#define asn1SccMyData2M_REQUIRED_BYTES_FOR_XER_ENCODING   451
+
+void asn1SccMyData2M_Initialize(asn1SccMyData2M* pVal);
+flag asn1SccMyData2M_IsConstraintValid(const asn1SccMyData2M* val, int* pErrCode);
+#ifndef ERR_asn1SccMyData2M 
+#define ERR_asn1SccMyData2M		1007  /*(SIZE(10))*/
+#endif
+
+typedef struct {    
+    asn1SccMyInteger arr[10];
+} asn1SccMyData4M;
+
+#define asn1SccMyData4M_REQUIRED_BYTES_FOR_ENCODING       10 
+#define asn1SccMyData4M_REQUIRED_BITS_FOR_ENCODING        80
+#define asn1SccMyData4M_REQUIRED_BYTES_FOR_ACN_ENCODING   10 
+#define asn1SccMyData4M_REQUIRED_BITS_FOR_ACN_ENCODING    80
+#define asn1SccMyData4M_REQUIRED_BYTES_FOR_XER_ENCODING   451
+
+void asn1SccMyData4M_Initialize(asn1SccMyData4M* pVal);
+flag asn1SccMyData4M_IsConstraintValid(const asn1SccMyData4M* val, int* pErrCode);
+#ifndef ERR_asn1SccMyData4M 
+#define ERR_asn1SccMyData4M		1008  /*(SIZE(10))*/
+#endif
+
+typedef flag asn1SccT_Boolean;
+
+#define asn1SccT_Boolean_REQUIRED_BYTES_FOR_ENCODING       1 
+#define asn1SccT_Boolean_REQUIRED_BITS_FOR_ENCODING        1
+#define asn1SccT_Boolean_REQUIRED_BYTES_FOR_ACN_ENCODING   1 
+#define asn1SccT_Boolean_REQUIRED_BITS_FOR_ACN_ENCODING    1
+#define asn1SccT_Boolean_REQUIRED_BYTES_FOR_XER_ENCODING   36
+
+void asn1SccT_Boolean_Initialize(asn1SccT_Boolean* pVal);
+flag asn1SccT_Boolean_IsConstraintValid(const asn1SccT_Boolean* val, int* pErrCode);
+
+
 typedef double asn1SccMyReal;
 
 #define asn1SccMyReal_REQUIRED_BYTES_FOR_ENCODING       13 
@@ -22,7 +166,7 @@ typedef double asn1SccMyReal;
 void asn1SccMyReal_Initialize(asn1SccMyReal* pVal);
 flag asn1SccMyReal_IsConstraintValid(const asn1SccMyReal* val, int* pErrCode);
 #ifndef ERR_asn1SccMyReal 
-#define ERR_asn1SccMyReal		1001  /*(0.00000000000000000000E+000 .. 1.00000000000000000000E+003)*/
+#define ERR_asn1SccMyReal		1009  /*(0.00000000000000000000E+000 .. 1.00000000000000000000E+003)*/
 #endif
 
 typedef flag asn1SccMyBool;
@@ -52,10 +196,10 @@ typedef enum {
 void asn1SccMyEnum_Initialize(asn1SccMyEnum* pVal);
 flag asn1SccMyEnum_IsConstraintValid(const asn1SccMyEnum* val, int* pErrCode);
 #ifndef ERR_asn1SccMyEnum_unknown_enumeration_value 
-#define ERR_asn1SccMyEnum_unknown_enumeration_value		1003  /**/
+#define ERR_asn1SccMyEnum_unknown_enumeration_value		1011  /**/
 #endif
 #ifndef ERR_asn1SccMyEnum 
-#define ERR_asn1SccMyEnum		1002  /**/
+#define ERR_asn1SccMyEnum		1010  /**/
 #endif
 
 typedef struct {    
@@ -71,7 +215,7 @@ typedef struct {
 void asn1SccMySeqOf_Initialize(asn1SccMySeqOf* pVal);
 flag asn1SccMySeqOf_IsConstraintValid(const asn1SccMySeqOf* val, int* pErrCode);
 #ifndef ERR_asn1SccMySeqOf 
-#define ERR_asn1SccMySeqOf		1004  /*(SIZE(2))*/
+#define ERR_asn1SccMySeqOf		1012  /*(SIZE(2))*/
 #endif
 
 typedef struct {    
@@ -87,7 +231,7 @@ typedef struct {
 void asn1SccMyOctStr_Initialize(asn1SccMyOctStr* pVal);
 flag asn1SccMyOctStr_IsConstraintValid(const asn1SccMyOctStr* val, int* pErrCode);
 #ifndef ERR_asn1SccMyOctStr 
-#define ERR_asn1SccMyOctStr		1005  /*(SIZE(3))*/
+#define ERR_asn1SccMyOctStr		1013  /*(SIZE(3))*/
 #endif
 
 typedef enum {
@@ -104,79 +248,11 @@ typedef enum {
 void asn1SccMySeq_validity_Initialize(asn1SccMySeq_validity* pVal);
 flag asn1SccMySeq_validity_IsConstraintValid(const asn1SccMySeq_validity* val, int* pErrCode);
 #ifndef ERR_asn1SccMySeq_validity_unknown_enumeration_value 
-#define ERR_asn1SccMySeq_validity_unknown_enumeration_value		1007  /**/
+#define ERR_asn1SccMySeq_validity_unknown_enumeration_value		1015  /**/
 #endif
 #ifndef ERR_asn1SccMySeq_validity 
-#define ERR_asn1SccMySeq_validity		1006  /**/
+#define ERR_asn1SccMySeq_validity		1014  /**/
 #endif
-
-typedef asn1SccSint asn1SccT_Int32;
-
-#define asn1SccT_Int32_REQUIRED_BYTES_FOR_ENCODING       4 
-#define asn1SccT_Int32_REQUIRED_BITS_FOR_ENCODING        32
-#define asn1SccT_Int32_REQUIRED_BYTES_FOR_ACN_ENCODING   4 
-#define asn1SccT_Int32_REQUIRED_BITS_FOR_ACN_ENCODING    32
-#define asn1SccT_Int32_REQUIRED_BYTES_FOR_XER_ENCODING   39
-
-void asn1SccT_Int32_Initialize(asn1SccT_Int32* pVal);
-flag asn1SccT_Int32_IsConstraintValid(const asn1SccT_Int32* val, int* pErrCode);
-#ifndef ERR_asn1SccT_Int32 
-#define ERR_asn1SccT_Int32		1008  /*(-2147483648 .. 2147483647)*/
-#endif
-
-typedef asn1SccUint asn1SccT_UInt32;
-
-#define asn1SccT_UInt32_REQUIRED_BYTES_FOR_ENCODING       4 
-#define asn1SccT_UInt32_REQUIRED_BITS_FOR_ENCODING        32
-#define asn1SccT_UInt32_REQUIRED_BYTES_FOR_ACN_ENCODING   4 
-#define asn1SccT_UInt32_REQUIRED_BITS_FOR_ACN_ENCODING    32
-#define asn1SccT_UInt32_REQUIRED_BYTES_FOR_XER_ENCODING   41
-
-void asn1SccT_UInt32_Initialize(asn1SccT_UInt32* pVal);
-flag asn1SccT_UInt32_IsConstraintValid(const asn1SccT_UInt32* val, int* pErrCode);
-#ifndef ERR_asn1SccT_UInt32 
-#define ERR_asn1SccT_UInt32		1009  /*(0 .. 4294967295)*/
-#endif
-
-typedef asn1SccSint asn1SccT_Int8;
-
-#define asn1SccT_Int8_REQUIRED_BYTES_FOR_ENCODING       1 
-#define asn1SccT_Int8_REQUIRED_BITS_FOR_ENCODING        8
-#define asn1SccT_Int8_REQUIRED_BYTES_FOR_ACN_ENCODING   1 
-#define asn1SccT_Int8_REQUIRED_BITS_FOR_ACN_ENCODING    8
-#define asn1SccT_Int8_REQUIRED_BYTES_FOR_XER_ENCODING   37
-
-void asn1SccT_Int8_Initialize(asn1SccT_Int8* pVal);
-flag asn1SccT_Int8_IsConstraintValid(const asn1SccT_Int8* val, int* pErrCode);
-#ifndef ERR_asn1SccT_Int8 
-#define ERR_asn1SccT_Int8		1010  /*(-128 .. 127)*/
-#endif
-
-typedef asn1SccUint asn1SccT_UInt8;
-
-#define asn1SccT_UInt8_REQUIRED_BYTES_FOR_ENCODING       1 
-#define asn1SccT_UInt8_REQUIRED_BITS_FOR_ENCODING        8
-#define asn1SccT_UInt8_REQUIRED_BYTES_FOR_ACN_ENCODING   1 
-#define asn1SccT_UInt8_REQUIRED_BITS_FOR_ACN_ENCODING    8
-#define asn1SccT_UInt8_REQUIRED_BYTES_FOR_XER_ENCODING   39
-
-void asn1SccT_UInt8_Initialize(asn1SccT_UInt8* pVal);
-flag asn1SccT_UInt8_IsConstraintValid(const asn1SccT_UInt8* val, int* pErrCode);
-#ifndef ERR_asn1SccT_UInt8 
-#define ERR_asn1SccT_UInt8		1011  /*(0 .. 255)*/
-#endif
-
-typedef asn1SccT_UInt8 asn1SccMyInteger;
-
-#define asn1SccMyInteger_REQUIRED_BYTES_FOR_ENCODING       1 
-#define asn1SccMyInteger_REQUIRED_BITS_FOR_ENCODING        8
-#define asn1SccMyInteger_REQUIRED_BYTES_FOR_ACN_ENCODING   1 
-#define asn1SccMyInteger_REQUIRED_BITS_FOR_ACN_ENCODING    8
-#define asn1SccMyInteger_REQUIRED_BYTES_FOR_XER_ENCODING   43
-
-void asn1SccMyInteger_Initialize(asn1SccMyInteger* pVal);
-flag asn1SccMyInteger_IsConstraintValid(const asn1SccMyInteger* val, int* pErrCode);
-
 
 typedef struct {
     asn1SccMyInteger input_data;
@@ -215,84 +291,8 @@ typedef struct {
 void asn1SccMyChoice_Initialize(asn1SccMyChoice* pVal);
 flag asn1SccMyChoice_IsConstraintValid(const asn1SccMyChoice* val, int* pErrCode);
 #ifndef ERR_asn1SccMyChoice_unknown_choice_index 
-#define ERR_asn1SccMyChoice_unknown_choice_index		1012  /**/
+#define ERR_asn1SccMyChoice_unknown_choice_index		1016  /**/
 #endif
-
-typedef struct {    
-    asn1SccMyInteger arr[16000];
-} asn1SccMyData16k;
-
-#define asn1SccMyData16k_REQUIRED_BYTES_FOR_ENCODING       16000 
-#define asn1SccMyData16k_REQUIRED_BITS_FOR_ENCODING        128000
-#define asn1SccMyData16k_REQUIRED_BYTES_FOR_ACN_ENCODING   16000 
-#define asn1SccMyData16k_REQUIRED_BITS_FOR_ACN_ENCODING    128000
-#define asn1SccMyData16k_REQUIRED_BYTES_FOR_XER_ENCODING   688023
-
-void asn1SccMyData16k_Initialize(asn1SccMyData16k* pVal);
-flag asn1SccMyData16k_IsConstraintValid(const asn1SccMyData16k* val, int* pErrCode);
-#ifndef ERR_asn1SccMyData16k 
-#define ERR_asn1SccMyData16k		1013  /*(SIZE(16000))*/
-#endif
-
-typedef struct {    
-    asn1SccMyInteger arr[1000];
-} asn1SccMyData512k;
-
-#define asn1SccMyData512k_REQUIRED_BYTES_FOR_ENCODING       1000 
-#define asn1SccMyData512k_REQUIRED_BITS_FOR_ENCODING        8000
-#define asn1SccMyData512k_REQUIRED_BYTES_FOR_ACN_ENCODING   1000 
-#define asn1SccMyData512k_REQUIRED_BITS_FOR_ACN_ENCODING    8000
-#define asn1SccMyData512k_REQUIRED_BYTES_FOR_XER_ENCODING   43025
-
-void asn1SccMyData512k_Initialize(asn1SccMyData512k* pVal);
-flag asn1SccMyData512k_IsConstraintValid(const asn1SccMyData512k* val, int* pErrCode);
-#ifndef ERR_asn1SccMyData512k 
-#define ERR_asn1SccMyData512k		1014  /*(SIZE(1000))*/
-#endif
-
-typedef struct {    
-    asn1SccMyInteger arr[1000];
-} asn1SccMyData2M;
-
-#define asn1SccMyData2M_REQUIRED_BYTES_FOR_ENCODING       1000 
-#define asn1SccMyData2M_REQUIRED_BITS_FOR_ENCODING        8000
-#define asn1SccMyData2M_REQUIRED_BYTES_FOR_ACN_ENCODING   1000 
-#define asn1SccMyData2M_REQUIRED_BITS_FOR_ACN_ENCODING    8000
-#define asn1SccMyData2M_REQUIRED_BYTES_FOR_XER_ENCODING   43021
-
-void asn1SccMyData2M_Initialize(asn1SccMyData2M* pVal);
-flag asn1SccMyData2M_IsConstraintValid(const asn1SccMyData2M* val, int* pErrCode);
-#ifndef ERR_asn1SccMyData2M 
-#define ERR_asn1SccMyData2M		1015  /*(SIZE(1000))*/
-#endif
-
-typedef struct {    
-    asn1SccMyInteger arr[1000];
-} asn1SccMyData4M;
-
-#define asn1SccMyData4M_REQUIRED_BYTES_FOR_ENCODING       1000 
-#define asn1SccMyData4M_REQUIRED_BITS_FOR_ENCODING        8000
-#define asn1SccMyData4M_REQUIRED_BYTES_FOR_ACN_ENCODING   1000 
-#define asn1SccMyData4M_REQUIRED_BITS_FOR_ACN_ENCODING    8000
-#define asn1SccMyData4M_REQUIRED_BYTES_FOR_XER_ENCODING   43021
-
-void asn1SccMyData4M_Initialize(asn1SccMyData4M* pVal);
-flag asn1SccMyData4M_IsConstraintValid(const asn1SccMyData4M* val, int* pErrCode);
-#ifndef ERR_asn1SccMyData4M 
-#define ERR_asn1SccMyData4M		1016  /*(SIZE(1000))*/
-#endif
-
-typedef flag asn1SccT_Boolean;
-
-#define asn1SccT_Boolean_REQUIRED_BYTES_FOR_ENCODING       1 
-#define asn1SccT_Boolean_REQUIRED_BITS_FOR_ENCODING        1
-#define asn1SccT_Boolean_REQUIRED_BYTES_FOR_ACN_ENCODING   1 
-#define asn1SccT_Boolean_REQUIRED_BITS_FOR_ACN_ENCODING    1
-#define asn1SccT_Boolean_REQUIRED_BYTES_FOR_XER_ENCODING   36
-
-void asn1SccT_Boolean_Initialize(asn1SccT_Boolean* pVal);
-flag asn1SccT_Boolean_IsConstraintValid(const asn1SccT_Boolean* val, int* pErrCode);
-
 
 extern const asn1SccMySeqOf myVar; 
 
@@ -301,6 +301,26 @@ extern const asn1SccMySeqOf myVar;
  * have been declared first, in case of parameterized ACN encodings
  * ========================================================================= */
 
+flag asn1SccT_Int32_Encode(const asn1SccT_Int32* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccT_Int32_Decode(asn1SccT_Int32* pVal, BitStream* pBitStrm, int* pErrCode);
+flag asn1SccT_UInt32_Encode(const asn1SccT_UInt32* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccT_UInt32_Decode(asn1SccT_UInt32* pVal, BitStream* pBitStrm, int* pErrCode);
+flag asn1SccT_Int8_Encode(const asn1SccT_Int8* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccT_Int8_Decode(asn1SccT_Int8* pVal, BitStream* pBitStrm, int* pErrCode);
+flag asn1SccT_UInt8_Encode(const asn1SccT_UInt8* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccT_UInt8_Decode(asn1SccT_UInt8* pVal, BitStream* pBitStrm, int* pErrCode);
+flag asn1SccMyInteger_Encode(const asn1SccMyInteger* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccMyInteger_Decode(asn1SccMyInteger* pVal, BitStream* pBitStrm, int* pErrCode);
+flag asn1SccMyData16k_Encode(const asn1SccMyData16k* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccMyData16k_Decode(asn1SccMyData16k* pVal, BitStream* pBitStrm, int* pErrCode);
+flag asn1SccMyData512k_Encode(const asn1SccMyData512k* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccMyData512k_Decode(asn1SccMyData512k* pVal, BitStream* pBitStrm, int* pErrCode);
+flag asn1SccMyData2M_Encode(const asn1SccMyData2M* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccMyData2M_Decode(asn1SccMyData2M* pVal, BitStream* pBitStrm, int* pErrCode);
+flag asn1SccMyData4M_Encode(const asn1SccMyData4M* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccMyData4M_Decode(asn1SccMyData4M* pVal, BitStream* pBitStrm, int* pErrCode);
+flag asn1SccT_Boolean_Encode(const asn1SccT_Boolean* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
+flag asn1SccT_Boolean_Decode(asn1SccT_Boolean* pVal, BitStream* pBitStrm, int* pErrCode);
 flag asn1SccMyReal_Encode(const asn1SccMyReal* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 flag asn1SccMyReal_Decode(asn1SccMyReal* pVal, BitStream* pBitStrm, int* pErrCode);
 flag asn1SccMyBool_Encode(const asn1SccMyBool* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
@@ -313,30 +333,10 @@ flag asn1SccMyOctStr_Encode(const asn1SccMyOctStr* val, BitStream* pBitStrm, int
 flag asn1SccMyOctStr_Decode(asn1SccMyOctStr* pVal, BitStream* pBitStrm, int* pErrCode);
 flag asn1SccMySeq_validity_Encode(const asn1SccMySeq_validity* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 flag asn1SccMySeq_validity_Decode(asn1SccMySeq_validity* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccT_Int32_Encode(const asn1SccT_Int32* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccT_Int32_Decode(asn1SccT_Int32* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccT_UInt32_Encode(const asn1SccT_UInt32* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccT_UInt32_Decode(asn1SccT_UInt32* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccT_Int8_Encode(const asn1SccT_Int8* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccT_Int8_Decode(asn1SccT_Int8* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccT_UInt8_Encode(const asn1SccT_UInt8* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccT_UInt8_Decode(asn1SccT_UInt8* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccMyInteger_Encode(const asn1SccMyInteger* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccMyInteger_Decode(asn1SccMyInteger* pVal, BitStream* pBitStrm, int* pErrCode);
 flag asn1SccMySeq_Encode(const asn1SccMySeq* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
 flag asn1SccMySeq_Decode(asn1SccMySeq* pVal, BitStream* pBitStrm, int* pErrCode);
 flag asn1SccMyChoice_Encode(const asn1SccMyChoice* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccMyChoice_Decode(asn1SccMyChoice* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccMyData16k_Encode(const asn1SccMyData16k* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccMyData16k_Decode(asn1SccMyData16k* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccMyData512k_Encode(const asn1SccMyData512k* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccMyData512k_Decode(asn1SccMyData512k* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccMyData2M_Encode(const asn1SccMyData2M* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccMyData2M_Decode(asn1SccMyData2M* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccMyData4M_Encode(const asn1SccMyData4M* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccMyData4M_Decode(asn1SccMyData4M* pVal, BitStream* pBitStrm, int* pErrCode);
-flag asn1SccT_Boolean_Encode(const asn1SccT_Boolean* val, BitStream* pBitStrm, int* pErrCode, flag bCheckConstraints);
-flag asn1SccT_Boolean_Decode(asn1SccT_Boolean* pVal, BitStream* pBitStrm, int* pErrCode); 
+flag asn1SccMyChoice_Decode(asn1SccMyChoice* pVal, BitStream* pBitStrm, int* pErrCode); 
 
 
 #ifdef  __cplusplus

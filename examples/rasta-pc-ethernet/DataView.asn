@@ -32,9 +32,17 @@ myVar       MySeqOf     ::= { hello, world }
 MyData16k ::= SEQUENCE (SIZE(16)) OF MyInteger 
 MyData512k ::= SEQUENCE (SIZE(10)) OF MyInteger 
 MyData2M ::= SEQUENCE (SIZE(10)) OF MyInteger 
-MyData4M ::= SEQUENCE (SIZE(10)) OF MyInteger 
+MyData4M ::= SEQUENCE (SIZE(10)) OF T-Int32
 
 END
+
+
+
+
+
+
+
+
 
 
 
